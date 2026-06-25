@@ -54,18 +54,24 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    .logo-group {
+      width: min(380px, 80vw);
+      margin: 0 auto 2rem;
+    }
+
     .mark {
       display: block;
       width: min(64px, 14vw);
       height: auto;
-      margin: 0 auto 2rem;
+      margin: 0 auto 1.5rem;
+      position: relative;
+      right: 3.75%;
     }
 
     .wordmark {
       display: block;
-      width: min(380px, 80vw);
+      width: 100%;
       height: auto;
-      margin: 0 auto 2rem;
     }
 
     .tagline {
@@ -149,8 +155,8 @@
 
     @media (max-width: 480px) {
       body { padding: 2rem 1.25rem; }
-      .mark { margin-bottom: 1.5rem; }
-      .wordmark { margin-bottom: 1.5rem; }
+      .logo-group { margin-bottom: 1.5rem; }
+      .mark { margin-bottom: 1rem; }
       .tagline { margin-bottom: 2rem; }
       .divider { margin-bottom: 2rem; }
       .descriptor { margin-bottom: 2.5rem; }
@@ -163,40 +169,44 @@
 
   <div class="content">
 
-    <!-- Secondary Mark — Filled Aperture-Dot (dark variant) -->
-    <svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="NHNCD mark">
-      <g transform="translate(40,40)">
-        <path d="M0,0 H400 V232 H232 V400 H0 Z" fill="#F4F2EC"/>
-        <path d="M232.0,232.0 h168.0 v168.0 h-168.0 Z" fill="#CC5F73"/>
-      </g>
-    </svg>
+    <div class="logo-group">
 
-    <!-- NHNCD Wordmark (dark variant — white on dark) -->
-    <svg class="wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2564 520" role="img" aria-label="NHNCD">
-      <rect width="2564" height="520" fill="#14181A"/>
-      <g transform="translate(60,60)">
-        <!-- N -->
-        <path d="M0.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <path d="M244.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <path d="M50.0,0 L121.0,0 L250.0,400.0 L179.0,400.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <!-- H -->
-        <path d="M488.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <path d="M732.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <path d="M544.0,164.0 h188.0 v56.0 h-188.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <!-- N -->
-        <path d="M976.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <path d="M1220.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <path d="M1026.0,0 L1097.0,0 L1226.0,400.0 L1155.0,400.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <!-- C -->
-        <path d="M1464.0,0 L1737.7,0 L1764.0,56.0 L1464.0,56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <path d="M1464.0,344.0 L1764.0,344.0 L1737.7,400.0 L1464.0,400.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <path d="M1464.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <!-- D -->
-        <path d="M1952.0,0 L2182.0,0 L2252.0,148.9 L2252.0,251.1 L2182.0,400.0 L1952.0,400.0 Z M2008.0,56.0 L2146.4,56.0 L2196.0,161.4 L2196.0,238.6 L2146.4,344.0 L2008.0,344.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
-        <!-- Accent dot -->
-        <path d="M2372.0,328.0 h72.0 v72.0 h-72.0 Z" fill="#CC5F73"/>
-      </g>
-    </svg>
+      <!-- Secondary Mark — Filled Aperture-Dot (dark variant, viewBox trimmed to content) -->
+      <svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="NHNCD mark">
+        <g transform="translate(40,40)">
+          <path d="M0,0 H400 V232 H232 V400 H0 Z" fill="#F4F2EC"/>
+          <path d="M232,232 h168 v168 h-168 Z" fill="#CC5F73"/>
+        </g>
+      </svg>
+
+      <!-- NHNCD Wordmark (dark variant — white on dark) -->
+      <svg class="wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2564 520" role="img" aria-label="NHNCD">
+        <rect width="2564" height="520" fill="#14181A"/>
+        <g transform="translate(60,60)">
+          <!-- N -->
+          <path d="M0.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <path d="M244.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <path d="M50.0,0 L121.0,0 L250.0,400.0 L179.0,400.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <!-- H -->
+          <path d="M488.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <path d="M732.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <path d="M544.0,164.0 h188.0 v56.0 h-188.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <!-- N -->
+          <path d="M976.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <path d="M1220.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <path d="M1026.0,0 L1097.0,0 L1226.0,400.0 L1155.0,400.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <!-- C -->
+          <path d="M1464.0,0 L1737.7,0 L1764.0,56.0 L1464.0,56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <path d="M1464.0,344.0 L1764.0,344.0 L1737.7,400.0 L1464.0,400.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <path d="M1464.0,0.0 h56.0 v400.0 h-56.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <!-- D -->
+          <path d="M1952.0,0 L2182.0,0 L2252.0,148.9 L2252.0,251.1 L2182.0,400.0 L1952.0,400.0 Z M2008.0,56.0 L2146.4,56.0 L2196.0,161.4 L2196.0,238.6 L2146.4,344.0 L2008.0,344.0 Z" fill="#F4F2EC" fill-rule="evenodd"/>
+          <!-- Accent dot -->
+          <path d="M2372.0,328.0 h72.0 v72.0 h-72.0 Z" fill="#CC5F73"/>
+        </g>
+      </svg>
+
+    </div>
 
     <p class="tagline">Be Enhanced by AI.</p>
 
