@@ -16,7 +16,7 @@ Static HTML — three pages (`index.html`, `energy/index.html`, `privacy/index.h
 
 ## Favicons
 
-PNG favicons at 16, 32, 48, 180, and 512px are in the repo root. Source SVGs are in the brand identity folder in the main NHNCD drive (not this repo).
+Two PNG favicon sets at 16, 32, 48, 180, and 512px are in the repo root: `favicon_*.png` (oxblood dot — used by `/`, `/privacy/`, `404.html`) and `favicon_energy_*.png` (energy-green dot `#489B76` — used by `/energy/` only). Source SVGs are in the brand identity folder in the main NHNCD drive (not this repo).
 
 ## Deployment
 
