@@ -277,10 +277,10 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
 a.tile:hover{border-color:var(--green-deep)}
 
 /* ---------- founder ---------- */
-.founder-grid{display:grid;grid-template-columns:360px 1fr;gap:40px 64px;align-items:stretch}
+.founder-grid{display:grid;grid-template-columns:360px 1fr;gap:40px 64px;align-items:end}
 .founder-grid figure{margin:0;display:flex}
 .founder-grid img{
-  width:100%;height:100%;object-fit:cover;
+  width:100%;aspect-ratio:1/1;height:auto;object-fit:cover;
   border:1px solid rgba(20,24,26,.3);
 }
 
@@ -434,9 +434,14 @@ a.tile:hover{border-color:var(--green-deep)}
 @media (max-width:960px){
   .apmark-decor{display:none}
   .energy-apmark{display:none}
-  .founder-grid{grid-template-columns:1fr}
-  .founder-grid figure{max-width:340px}
-  .founder-grid img{height:auto;aspect-ratio:4/5}
+  .founder-grid{display:flex;flex-direction:column;align-items:stretch}
+  .founder-grid .body-copy{display:contents}
+  .founder-grid .rule{order:1}
+  .founder-grid .eyebrow{order:2}
+  .founder-grid figure{order:3;max-width:340px;margin:6px 0 2px}
+  .founder-grid .sec-title{order:4}
+  .founder-grid .body-copy p:not(.eyebrow){order:5}
+  .founder-grid img{height:auto;aspect-ratio:1/1}
   .tiles{grid-template-columns:1fr}
   .tile{min-height:0}
   .svc-grid{grid-template-columns:1fr}
@@ -646,7 +651,7 @@ a.tile:hover{border-color:var(--green-deep)}
 <section id="about" aria-labelledby="t-founder" style="padding-top:0">
   <div class="wrap founder-grid">
     <figure>
-      <img src="/assets/founder-luca.jpg" loading="lazy" decoding="async" alt="Luca Ceschinelli" width="720" height="900">
+      <img src="/assets/founder-luca.jpg" loading="lazy" decoding="async" alt="Luca Ceschinelli" width="800" height="800">
     </figure>
     <div class="body-copy">
       <div class="rule"></div>
