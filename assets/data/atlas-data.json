@@ -1,809 +1,659 @@
 {
- "regions": [
-  {
-   "key": "gcc",
-   "label": "GCC",
-   "projects": 9,
-   "countries": 3,
-   "gwBand": null
-  },
-  {
-   "key": "north-africa",
-   "label": "North Africa",
-   "projects": 9,
-   "countries": 3,
-   "gwBand": null
-  },
-  {
-   "key": "west-africa",
-   "label": "West Africa",
-   "projects": 29,
-   "countries": 11,
-   "gwBand": "0.5–1 GW"
-  },
-  {
-   "key": "caribbean",
-   "label": "Caribbean",
-   "projects": 6,
-   "countries": 2,
-   "gwBand": "100–500 MW"
-  },
-  {
-   "key": "italy",
-   "label": "Italy",
-   "projects": 29,
-   "countries": 1,
-   "gwBand": "100–500 MW"
-  },
-  {
-   "key": "south-asia",
-   "label": "South Asia",
-   "projects": 4,
-   "countries": 2,
-   "gwBand": "100–500 MW"
-  },
-  {
-   "key": "australia",
-   "label": "Australia",
-   "projects": 105,
-   "countries": 1,
-   "gwBand": "GW-scale"
-  },
+ "groups": [
   {
    "key": "americas",
    "label": "Americas",
-   "projects": 53,
-   "countries": 8,
+   "projects": 59,
+   "countries": 10,
+   "gwBand": "0.5–1 GW"
+  },
+  {
+   "key": "europe",
+   "label": "Europe",
+   "projects": 54,
+   "countries": 9,
    "gwBand": "100–500 MW"
+  },
+  {
+   "key": "africa",
+   "label": "Africa",
+   "projects": 69,
+   "countries": 31,
+   "gwBand": "GW-scale"
+  },
+  {
+   "key": "middle-east",
+   "label": "Middle East",
+   "projects": 16,
+   "countries": 5,
+   "gwBand": "GW-scale"
+  },
+  {
+   "key": "asia",
+   "label": "Asia",
+   "projects": 34,
+   "countries": 8,
+   "gwBand": "0.5–1 GW"
+  },
+  {
+   "key": "australia-pacific",
+   "label": "Australia & Pacific",
+   "projects": 108,
+   "countries": 4,
+   "gwBand": "GW-scale"
   }
  ],
  "marks": [
   {
-   "loc": "west-africa",
-   "band": 1
-  },
-  {
-   "loc": "SLE",
-   "band": 3
-  },
-  {
    "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "SAU",
-   "band": 3
-  },
-  {
-   "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "west-africa",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "americas",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "ARG",
-   "band": 3
-  },
-  {
-   "loc": "GIN",
-   "band": 3
-  },
-  {
-   "loc": "PER",
-   "band": 2
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "CHL",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "americas",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "GIN",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "BHS",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 2
-  },
-  {
-   "loc": "BHS",
-   "band": 3
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "ARG",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 3
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "SLE",
-   "band": 3
+   "band": 4
   },
   {
    "loc": "ARE",
+   "band": 3
+  },
+  {
+   "loc": "MLI",
+   "band": 8
+  },
+  {
+   "loc": "PHL",
    "band": 5
   },
   {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
    "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "EGY",
-   "band": 2
-  },
-  {
-   "loc": "SDN",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "ARE",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "west-africa",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "BRA",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "GIN",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
    "band": 4
   },
   {
-   "loc": "SAU",
-   "band": 3
-  },
-  {
    "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "west-africa",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "ARE",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "ARG",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 2
-  },
-  {
-   "loc": "EGY",
-   "band": 3
-  },
-  {
-   "loc": "NER",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "americas",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "SLE",
-   "band": 3
-  },
-  {
-   "loc": "EGY",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "west-africa",
-   "band": 3
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "MLI",
-   "band": 3
-  },
-  {
-   "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "NER",
-   "band": 3
-  },
-  {
-   "loc": "ARG",
-   "band": 3
-  },
-  {
-   "loc": "SDN",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "MLI",
-   "band": 3
-  },
-  {
-   "loc": "BGD",
-   "band": 4
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "west-africa",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "west-africa",
-   "band": 4
-  },
-  {
-   "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "BRA",
-   "band": 3
-  },
-  {
-   "loc": "CHL",
-   "band": 2
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "EGY",
-   "band": 3
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "SAU",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "south-asia",
-   "band": 1
-  },
-  {
-   "loc": "CHL",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "west-africa",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "CHL",
-   "band": 3
-  },
-  {
-   "loc": "MLI",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "caribbean",
-   "band": 1
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "BHS",
-   "band": 3
-  },
-  {
-   "loc": "north-africa",
    "band": 5
   },
   {
    "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "GIN",
-   "band": 2
-  },
-  {
-   "loc": "gcc",
-   "band": 2
+   "band": 6
   },
   {
    "loc": "AUS",
-   "band": 2
+   "band": 4
   },
   {
-   "loc": "west-africa",
+   "loc": "SHN",
+   "band": 5
+  },
+  {
+   "loc": "IDN",
+   "band": 8
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
    "band": 3
   },
   {
+   "loc": "NAM",
+   "band": 6
+  },
+  {
+   "loc": "ERI",
+   "band": 8
+  },
+  {
+   "loc": "ITA",
+   "band": 6
+  },
+  {
+   "loc": "MMR",
+   "band": 7
+  },
+  {
    "loc": "AUS",
-   "band": 2
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "JPN",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 8
+  },
+  {
+   "loc": "KEN",
+   "band": 5
+  },
+  {
+   "loc": "MOZ",
+   "band": 6
   },
   {
    "loc": "PER",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
    "band": 2
   },
   {
-   "loc": "AUS",
-   "band": 2
+   "loc": "BRA",
+   "band": 4
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "ZMB",
+   "band": 7
+  },
+  {
+   "loc": "CHL",
+   "band": 7
   },
   {
    "loc": "BRA",
    "band": 1
   },
   {
-   "loc": "AUS",
-   "band": 3
+   "loc": "ITA",
+   "band": 4
   },
   {
    "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "SAU",
+   "band": 7
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "ARG",
+   "band": 7
+  },
+  {
+   "loc": "GIN",
+   "band": 6
+  },
+  {
+   "loc": "MLI",
+   "band": 7
+  },
+  {
+   "loc": "SAU",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "BRA",
+   "band": 7
+  },
+  {
+   "loc": "ROU",
+   "band": 4
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "PHL",
+   "band": 6
+  },
+  {
+   "loc": "MLI",
+   "band": 6
+  },
+  {
+   "loc": "TUR",
+   "band": 4
+  },
+  {
+   "loc": "MDG",
+   "band": 7
+  },
+  {
+   "loc": "PHL",
    "band": 3
+  },
+  {
+   "loc": "MOZ",
+   "band": 7
+  },
+  {
+   "loc": "NAM",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "ROU",
+   "band": 7
+  },
+  {
+   "loc": "SEN",
+   "band": 8
+  },
+  {
+   "loc": "ROU",
+   "band": 5
+  },
+  {
+   "loc": "TUR",
+   "band": 4
   },
   {
    "loc": "EGY",
-   "band": 3
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 5
   },
   {
    "loc": "BRA",
    "band": 1
   },
   {
-   "loc": "BHS",
-   "band": 3
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "IDN",
+   "band": 9
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 4
+  },
+  {
+   "loc": "BRA",
+   "band": 6
+  },
+  {
+   "loc": "VNM",
+   "band": 6
+  },
+  {
+   "loc": "NER",
+   "band": 7
+  },
+  {
+   "loc": "PHL",
+   "band": 8
   },
   {
    "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "LBR",
+   "band": 8
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "IRL",
+   "band": 2
+  },
+  {
+   "loc": "KEN",
+   "band": 4
+  },
+  {
+   "loc": "CHL",
+   "band": 7
+  },
+  {
+   "loc": "ITA",
+   "band": 3
+  },
+  {
+   "loc": "NLD",
+   "band": 4
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "MLI",
+   "band": 6
+  },
+  {
+   "loc": "ITA",
+   "band": 3
+  },
+  {
+   "loc": "GBR",
+   "band": 4
+  },
+  {
+   "loc": "ITA",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "GBR",
+   "band": 4
+  },
+  {
+   "loc": "EGY",
+   "band": 7
+  },
+  {
+   "loc": "BRA",
+   "band": 3
+  },
+  {
+   "loc": "COG",
+   "band": 3
+  },
+  {
+   "loc": "TUR",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "MOZ",
+   "band": 8
+  },
+  {
+   "loc": "GBR",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "ARG",
+   "band": 6
+  },
+  {
+   "loc": "TCD",
+   "band": 5
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 9
+  },
+  {
+   "loc": "PHL",
+   "band": 7
+  },
+  {
+   "loc": "NGA",
+   "band": 5
+  },
+  {
+   "loc": "ARG",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "GBR",
+   "band": 2
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "MOZ",
+   "band": 7
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 8
+  },
+  {
+   "loc": "IRQ",
+   "band": 2
+  },
+  {
+   "loc": "GBR",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BHS",
+   "band": 7
+  },
+  {
+   "loc": "NER",
+   "band": 6
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "SLE",
+   "band": 8
+  },
+  {
+   "loc": "TUR",
+   "band": 5
+  },
+  {
+   "loc": "MEX",
+   "band": 3
+  },
+  {
+   "loc": "BGD",
+   "band": 9
+  },
+  {
+   "loc": "ROU",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 8
+  },
+  {
+   "loc": "UGA",
+   "band": 5
+  },
+  {
+   "loc": "ROU",
+   "band": 2
+  },
+  {
+   "loc": "GBR",
+   "band": 5
+  },
+  {
+   "loc": "ITA",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 9
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "BRA",
+   "band": 6
+  },
+  {
+   "loc": "OMN",
+   "band": 5
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "AGO",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "ARE",
+   "band": 2
+  },
+  {
+   "loc": "PHL",
    "band": 2
   },
   {
@@ -811,32 +661,144 @@
    "band": 3
   },
   {
-   "loc": "PER",
-   "band": 1
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "PHL",
+   "band": 8
+  },
+  {
+   "loc": "CMR",
+   "band": 2
   },
   {
    "loc": "AUS",
-   "band": 3
+   "band": 7
+  },
+  {
+   "loc": "TCD",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "BGD",
+   "band": 9
+  },
+  {
+   "loc": "GAB",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "GUY",
+   "band": 7
+  },
+  {
+   "loc": "ERI",
+   "band": 7
+  },
+  {
+   "loc": "DNK",
+   "band": 2
   },
   {
    "loc": "SDN",
+   "band": 6
+  },
+  {
+   "loc": "GBR",
+   "band": 2
+  },
+  {
+   "loc": "IDN",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "ALB",
    "band": 2
   },
   {
    "loc": "AUS",
-   "band": 1
+   "band": 5
+  },
+  {
+   "loc": "COL",
+   "band": 7
   },
   {
    "loc": "AUS",
+   "band": 8
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "IND",
    "band": 2
   },
   {
-   "loc": "BRA",
-   "band": 1
+   "loc": "PRI",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "CIV",
+   "band": 9
+  },
+  {
+   "loc": "IDN",
+   "band": 5
   },
   {
    "loc": "PER",
-   "band": 1
+   "band": 5
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 4
   },
   {
    "loc": "ITA",
@@ -844,261 +806,887 @@
   },
   {
    "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "ITA",
+   "band": 3
+  },
+  {
+   "loc": "BHS",
+   "band": 7
+  },
+  {
+   "loc": "MRT",
+   "band": 4
+  },
+  {
+   "loc": "GIN",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "BRA",
+   "band": 4
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "ITA",
    "band": 2
+  },
+  {
+   "loc": "BFA",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "COG",
+   "band": 9
+  },
+  {
+   "loc": "COL",
+   "band": 7
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "GIN",
+   "band": 7
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "CIV",
+   "band": 8
+  },
+  {
+   "loc": "SDN",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "CHL",
+   "band": 5
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "GBR",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "SLE",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "BRA",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "IDN",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 4
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "GBR",
+   "band": 4
+  },
+  {
+   "loc": "PHL",
+   "band": 6
   },
   {
    "loc": "AUS",
    "band": 3
   },
   {
+   "loc": "BHS",
+   "band": 5
+  },
+  {
    "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "SOM",
+   "band": 5
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 8
+  },
+  {
+   "loc": "BRA",
    "band": 1
   },
   {
    "loc": "AUS",
-   "band": 2
+   "band": 4
   },
   {
    "loc": "AUS",
-   "band": 1
+   "band": 4
   },
   {
    "loc": "AUS",
-   "band": 1
+   "band": 4
   },
   {
-   "loc": "MLI",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
+   "loc": "BRA",
    "band": 1
   },
   {
    "loc": "BHS",
-   "band": 3
+   "band": 7
+  },
+  {
+   "loc": "EGY",
+   "band": 7
+  },
+  {
+   "loc": "MWI",
+   "band": 5
   },
   {
    "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "west-africa",
-   "band": 3
-  },
-  {
-   "loc": "ITA",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 4
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 4
-  },
-  {
-   "loc": "gcc",
-   "band": 1
-  },
-  {
-   "loc": "americas",
-   "band": 3
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "MLI",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "AUS",
-   "band": 1
-  },
-  {
-   "loc": "AUS",
-   "band": 3
-  },
-  {
-   "loc": "BRA",
-   "band": 3
-  },
-  {
-   "loc": "BRA",
-   "band": 1
-  },
-  {
-   "loc": "west-africa",
-   "band": 3
+   "band": 7
   },
   {
    "loc": "GIN",
+   "band": 6
+  },
+  {
+   "loc": "UGA",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "GAB",
+   "band": 5
+  },
+  {
+   "loc": "TUR",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "ITA",
+   "band": 4
+  },
+  {
+   "loc": "MRT",
+   "band": 5
+  },
+  {
+   "loc": "MDG",
+   "band": 7
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "IDN",
+   "band": 2
+  },
+  {
+   "loc": "OMN",
+   "band": 3
+  },
+  {
+   "loc": "MNG",
+   "band": 6
+  },
+  {
+   "loc": "BRA",
+   "band": 4
+  },
+  {
+   "loc": "ALB",
    "band": 2
   },
   {
    "loc": "AUS",
    "band": 1
+  },
+  {
+   "loc": "GIN",
+   "band": 6
+  },
+  {
+   "loc": "RUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "PHL",
+   "band": 5
   },
   {
    "loc": "PER",
    "band": 2
   },
   {
-   "loc": "AUS",
+   "loc": "SAU",
+   "band": 7
+  },
+  {
+   "loc": "NRU",
    "band": 3
   },
   {
-   "loc": "AUS",
-   "band": 2
-  },
-  {
-   "loc": "americas",
-   "band": 1
-  },
-  {
-   "loc": "BGD",
-   "band": 3
-  },
-  {
-   "loc": "ITA",
-   "band": 2
-  },
-  {
-   "loc": "GIN",
-   "band": 3
-  },
-  {
-   "loc": "BGD",
+   "loc": "PHL",
    "band": 4
   },
   {
+   "loc": "TUR",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "BRA",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "DJI",
+   "band": 2
+  },
+  {
    "loc": "MLI",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "PER",
+   "band": 4
+  },
+  {
+   "loc": "BWA",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "TZA",
+   "band": 6
+  },
+  {
+   "loc": "CMR",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "ESP",
+   "band": 4
+  },
+  {
+   "loc": "GIN",
+   "band": 6
+  },
+  {
+   "loc": "USA",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "ROU",
    "band": 3
   },
   {
    "loc": "SAU",
+   "band": 2
+  },
+  {
+   "loc": "LBR",
+   "band": 5
+  },
+  {
+   "loc": "MNG",
+   "band": 8
+  },
+  {
+   "loc": "BRA",
    "band": 1
   },
   {
-   "loc": "ITA",
-   "band": 1
+   "loc": "SLE",
+   "band": 7
   },
   {
    "loc": "NER",
    "band": 2
   },
   {
-   "loc": "americas",
-   "band": 3
-  },
-  {
    "loc": "AUS",
-   "band": 3
+   "band": 6
   },
   {
-   "loc": "BRA",
-   "band": 1
+   "loc": "ITA",
+   "band": 6
   },
   {
-   "loc": "AUS",
+   "loc": "ROU",
+   "band": 4
+  },
+  {
+   "loc": "SEN",
    "band": 2
   },
   {
+   "loc": "ESP",
+   "band": 3
+  },
+  {
    "loc": "BRA",
    "band": 1
+  },
+  {
+   "loc": "AGO",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "ARG",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 8
+  },
+  {
+   "loc": "GBR",
+   "band": 2
+  },
+  {
+   "loc": "MWI",
+   "band": 6
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "PHL",
+   "band": 5
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 7
+  },
+  {
+   "loc": "WSM",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 6
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "CHL",
+   "band": 6
+  },
+  {
+   "loc": "ITA",
+   "band": 4
+  },
+  {
+   "loc": "EGY",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 5
+  },
+  {
+   "loc": "PNG",
+   "band": 7
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "EGY",
+   "band": 7
+  },
+  {
+   "loc": "SDN",
+   "band": 6
+  }
+ ],
+ "flagships": [
+  {
+   "loc": "ARE",
+   "band": 12
+  },
+  {
+   "loc": "AUS",
+   "band": 9
+  },
+  {
+   "loc": "MAR",
+   "band": 12
+  },
+  {
+   "loc": "ITA",
+   "band": 5
+  },
+  {
+   "loc": "MLI",
+   "band": 7
+  },
+  {
+   "loc": "BHS",
+   "band": 7
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 8
+  },
+  {
+   "loc": "BGD",
+   "band": 8
+  },
+  {
+   "loc": "USA",
+   "band": 7
   }
  ],
  "iso": {
   "BGD": {
    "id": "050",
-   "zone": "south-asia"
+   "group": "asia"
+  },
+  "ERI": {
+   "id": "232",
+   "group": "africa"
   },
   "MLI": {
    "id": "466",
-   "zone": "west-africa"
+   "group": "africa"
   },
   "GIN": {
    "id": "324",
-   "zone": "west-africa"
+   "group": "africa"
   },
   "SDN": {
    "id": "729",
-   "zone": "north-africa"
+   "group": "africa"
   },
   "AUS": {
    "id": "036",
-   "zone": "australia"
+   "group": "australia-pacific"
   },
   "ITA": {
    "id": "380",
-   "zone": "italy"
+   "group": "europe"
+  },
+  "USA": {
+   "id": "840",
+   "group": "americas"
+  },
+  "ALB": {
+   "id": "008",
+   "group": "europe"
+  },
+  "ROU": {
+   "id": "642",
+   "group": "europe"
+  },
+  "GBR": {
+   "id": "826",
+   "group": "europe"
+  },
+  "TUR": {
+   "id": "792",
+   "group": "middle-east"
+  },
+  "AGO": {
+   "id": "024",
+   "group": "africa"
   },
   "ARG": {
    "id": "032",
-   "zone": "americas"
+   "group": "americas"
+  },
+  "SHN": {
+   "id": "654",
+   "group": "africa",
+   "ll": [
+    -5.72,
+    -15.93
+   ]
+  },
+  "BWA": {
+   "id": "072",
+   "group": "africa"
   },
   "BRA": {
    "id": "076",
-   "zone": "americas"
+   "group": "americas"
+  },
+  "BFA": {
+   "id": "854",
+   "group": "africa"
+  },
+  "CMR": {
+   "id": "120",
+   "group": "africa"
+  },
+  "TCD": {
+   "id": "148",
+   "group": "africa"
   },
   "CHL": {
    "id": "152",
-   "zone": "americas"
+   "group": "americas"
+  },
+  "COL": {
+   "id": "170",
+   "group": "americas"
+  },
+  "CIV": {
+   "id": "384",
+   "group": "africa"
+  },
+  "DNK": {
+   "id": "208",
+   "group": "europe"
+  },
+  "DJI": {
+   "id": "262",
+   "group": "africa"
+  },
+  "COG": {
+   "id": "178",
+   "group": "africa"
   },
   "EGY": {
    "id": "818",
-   "zone": "north-africa"
+   "group": "africa"
+  },
+  "GAB": {
+   "id": "266",
+   "group": "africa"
+  },
+  "GUY": {
+   "id": "328",
+   "group": "americas"
+  },
+  "IND": {
+   "id": "356",
+   "group": "asia"
+  },
+  "IDN": {
+   "id": "360",
+   "group": "asia"
+  },
+  "IRQ": {
+   "id": "368",
+   "group": "middle-east"
+  },
+  "IRL": {
+   "id": "372",
+   "group": "europe"
+  },
+  "JPN": {
+   "id": "392",
+   "group": "asia"
+  },
+  "KEN": {
+   "id": "404",
+   "group": "africa"
+  },
+  "LBR": {
+   "id": "430",
+   "group": "africa"
+  },
+  "MDG": {
+   "id": "450",
+   "group": "africa"
+  },
+  "MRT": {
+   "id": "478",
+   "group": "africa"
+  },
+  "MEX": {
+   "id": "484",
+   "group": "americas"
+  },
+  "MNG": {
+   "id": "496",
+   "group": "asia"
+  },
+  "MOZ": {
+   "id": "508",
+   "group": "africa"
+  },
+  "MMR": {
+   "id": "104",
+   "group": "asia"
+  },
+  "NAM": {
+   "id": "516",
+   "group": "africa"
+  },
+  "NRU": {
+   "id": "520",
+   "group": "australia-pacific",
+   "ll": [
+    166.92,
+    -0.53
+   ]
   },
   "NER": {
    "id": "562",
-   "zone": "west-africa"
+   "group": "africa"
+  },
+  "NGA": {
+   "id": "566",
+   "group": "africa"
+  },
+  "OMN": {
+   "id": "512",
+   "group": "middle-east"
   },
   "PER": {
    "id": "604",
-   "zone": "americas"
+   "group": "americas"
+  },
+  "PHL": {
+   "id": "608",
+   "group": "asia"
+  },
+  "PRI": {
+   "id": "630",
+   "group": "americas"
+  },
+  "RUS": {
+   "id": "643",
+   "group": "europe"
+  },
+  "WSM": {
+   "id": "882",
+   "group": "australia-pacific",
+   "ll": [
+    -172.4,
+    -13.6
+   ]
   },
   "SAU": {
    "id": "682",
-   "zone": "gcc"
+   "group": "middle-east"
+  },
+  "SEN": {
+   "id": "686",
+   "group": "africa"
   },
   "SLE": {
    "id": "694",
-   "zone": "west-africa"
+   "group": "africa"
+  },
+  "SOM": {
+   "id": "706",
+   "group": "africa"
+  },
+  "ESP": {
+   "id": "724",
+   "group": "europe"
+  },
+  "TZA": {
+   "id": "834",
+   "group": "africa"
   },
   "ARE": {
    "id": "784",
-   "zone": "gcc"
+   "group": "middle-east"
+  },
+  "UGA": {
+   "id": "800",
+   "group": "africa"
+  },
+  "VNM": {
+   "id": "704",
+   "group": "asia"
+  },
+  "ZMB": {
+   "id": "894",
+   "group": "africa"
   },
   "BHS": {
    "id": "044",
-   "zone": "caribbean"
+   "group": "americas"
+  },
+  "NLD": {
+   "id": "528",
+   "group": "europe"
+  },
+  "MWI": {
+   "id": "454",
+   "group": "africa"
+  },
+  "PNG": {
+   "id": "598",
+   "group": "australia-pacific"
+  },
+  "MAR": {
+   "id": "504",
+   "group": "africa"
   }
  }
 }
