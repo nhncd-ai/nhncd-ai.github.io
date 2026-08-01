@@ -1,0 +1,1104 @@
+{
+ "regions": [
+  {
+   "key": "gcc",
+   "label": "GCC",
+   "projects": 9,
+   "countries": 3,
+   "gwBand": null
+  },
+  {
+   "key": "north-africa",
+   "label": "North Africa",
+   "projects": 9,
+   "countries": 3,
+   "gwBand": null
+  },
+  {
+   "key": "west-africa",
+   "label": "West Africa",
+   "projects": 29,
+   "countries": 11,
+   "gwBand": "0.5–1 GW"
+  },
+  {
+   "key": "caribbean",
+   "label": "Caribbean",
+   "projects": 6,
+   "countries": 2,
+   "gwBand": "100–500 MW"
+  },
+  {
+   "key": "italy",
+   "label": "Italy",
+   "projects": 29,
+   "countries": 1,
+   "gwBand": "100–500 MW"
+  },
+  {
+   "key": "south-asia",
+   "label": "South Asia",
+   "projects": 4,
+   "countries": 2,
+   "gwBand": "100–500 MW"
+  },
+  {
+   "key": "australia",
+   "label": "Australia",
+   "projects": 105,
+   "countries": 1,
+   "gwBand": "GW-scale"
+  },
+  {
+   "key": "americas",
+   "label": "Americas",
+   "projects": 53,
+   "countries": 8,
+   "gwBand": "100–500 MW"
+  }
+ ],
+ "marks": [
+  {
+   "loc": "west-africa",
+   "band": 1
+  },
+  {
+   "loc": "SLE",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "SAU",
+   "band": 3
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "west-africa",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "americas",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "ARG",
+   "band": 3
+  },
+  {
+   "loc": "GIN",
+   "band": 3
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "CHL",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "americas",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "GIN",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BHS",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 2
+  },
+  {
+   "loc": "BHS",
+   "band": 3
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "ARG",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 3
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "SLE",
+   "band": 3
+  },
+  {
+   "loc": "ARE",
+   "band": 5
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "EGY",
+   "band": 2
+  },
+  {
+   "loc": "SDN",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "ARE",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "west-africa",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "BRA",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "GIN",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "SAU",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "west-africa",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "ARE",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "ARG",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 2
+  },
+  {
+   "loc": "EGY",
+   "band": 3
+  },
+  {
+   "loc": "NER",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "americas",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "SLE",
+   "band": 3
+  },
+  {
+   "loc": "EGY",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "west-africa",
+   "band": 3
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "MLI",
+   "band": 3
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "NER",
+   "band": 3
+  },
+  {
+   "loc": "ARG",
+   "band": 3
+  },
+  {
+   "loc": "SDN",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "MLI",
+   "band": 3
+  },
+  {
+   "loc": "BGD",
+   "band": 4
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "west-africa",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "west-africa",
+   "band": 4
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "BRA",
+   "band": 3
+  },
+  {
+   "loc": "CHL",
+   "band": 2
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "EGY",
+   "band": 3
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "SAU",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "south-asia",
+   "band": 1
+  },
+  {
+   "loc": "CHL",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "west-africa",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "CHL",
+   "band": 3
+  },
+  {
+   "loc": "MLI",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "caribbean",
+   "band": 1
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "BHS",
+   "band": 3
+  },
+  {
+   "loc": "north-africa",
+   "band": 5
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "GIN",
+   "band": 2
+  },
+  {
+   "loc": "gcc",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "west-africa",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "EGY",
+   "band": 3
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "BHS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "SDN",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "PER",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "MLI",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "BHS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "west-africa",
+   "band": 3
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 4
+  },
+  {
+   "loc": "gcc",
+   "band": 1
+  },
+  {
+   "loc": "americas",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "MLI",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "BRA",
+   "band": 3
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "west-africa",
+   "band": 3
+  },
+  {
+   "loc": "GIN",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 1
+  },
+  {
+   "loc": "PER",
+   "band": 2
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "americas",
+   "band": 1
+  },
+  {
+   "loc": "BGD",
+   "band": 3
+  },
+  {
+   "loc": "ITA",
+   "band": 2
+  },
+  {
+   "loc": "GIN",
+   "band": 3
+  },
+  {
+   "loc": "BGD",
+   "band": 4
+  },
+  {
+   "loc": "MLI",
+   "band": 3
+  },
+  {
+   "loc": "SAU",
+   "band": 1
+  },
+  {
+   "loc": "ITA",
+   "band": 1
+  },
+  {
+   "loc": "NER",
+   "band": 2
+  },
+  {
+   "loc": "americas",
+   "band": 3
+  },
+  {
+   "loc": "AUS",
+   "band": 3
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  },
+  {
+   "loc": "AUS",
+   "band": 2
+  },
+  {
+   "loc": "BRA",
+   "band": 1
+  }
+ ],
+ "iso": {
+  "BGD": {
+   "id": "050",
+   "zone": "south-asia"
+  },
+  "MLI": {
+   "id": "466",
+   "zone": "west-africa"
+  },
+  "GIN": {
+   "id": "324",
+   "zone": "west-africa"
+  },
+  "SDN": {
+   "id": "729",
+   "zone": "north-africa"
+  },
+  "AUS": {
+   "id": "036",
+   "zone": "australia"
+  },
+  "ITA": {
+   "id": "380",
+   "zone": "italy"
+  },
+  "ARG": {
+   "id": "032",
+   "zone": "americas"
+  },
+  "BRA": {
+   "id": "076",
+   "zone": "americas"
+  },
+  "CHL": {
+   "id": "152",
+   "zone": "americas"
+  },
+  "EGY": {
+   "id": "818",
+   "zone": "north-africa"
+  },
+  "NER": {
+   "id": "562",
+   "zone": "west-africa"
+  },
+  "PER": {
+   "id": "604",
+   "zone": "americas"
+  },
+  "SAU": {
+   "id": "682",
+   "zone": "gcc"
+  },
+  "SLE": {
+   "id": "694",
+   "zone": "west-africa"
+  },
+  "ARE": {
+   "id": "784",
+   "zone": "gcc"
+  },
+  "BHS": {
+   "id": "044",
+   "zone": "caribbean"
+  }
+ }
+}
