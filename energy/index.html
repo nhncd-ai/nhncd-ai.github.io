@@ -794,7 +794,6 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
     <div class="rule" style="background:var(--oxblood)"></div>
     <p class="proof-kicker">Track record</p>
     <h2 class="sec-title proof-title" id="proof-title">The record, on the table.</h2>
-    <p class="proof-sub">The founder's operating record, region by region.</p>
 
     <div class="apex" id="apex" role="group" aria-label="Practice at a glance">
       <div class="apex-cell">
@@ -823,14 +822,14 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
     <div class="atlas" id="atlas" data-atlas-slot>
       <div class="atlas-head">
         <span>The record, mapped</span>
-        <span>Six regions · select to filter</span>
+        <span>Six world regions · select to filter</span>
       </div>
       <div class="atlas-stage" id="atlasStage"></div>
       <div class="atlas-legend-bar" aria-hidden="true">
         <span class="alb-item"><svg class="alb-ramp" viewBox="0 0 96 22" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="14" r="1.5"/><circle cx="16" cy="14" r="2.15"/><circle cx="28" cy="14" r="3.1"/><circle cx="43" cy="14" r="4.45"/><circle cx="61" cy="14" r="6.4"/><circle cx="84" cy="14" r="9.2"/></svg>Dot size tracks project capacity</span>
         <span class="alb-item"><svg class="alb-gold" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="4.6"/></svg>Flagship — opens its record card</span>
       </div>
-      <div class="atlas-strip" role="group" aria-label="Continental groups of the record — select to filter the flagship records">
+      <div class="atlas-strip" role="group" aria-label="World regions of the record — select to filter the flagship records">
         <button class="atlas-world" id="atlasWorld" type="button" aria-pressed="true">World</button>
         <button class="atlas-region" type="button" data-region="americas" aria-pressed="false">Americas</button>
         <button class="atlas-region" type="button" data-region="europe" aria-pressed="false">Europe</button>
@@ -840,7 +839,7 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
         <button class="atlas-region" type="button" data-region="australia-pacific" aria-pressed="false">Australia &amp; Pacific</button>
       </div>
       <div class="atlas-foot">
-        <p>One dot per project — placed within its country, not at its site.</p>
+        <p>One dot per project, placed by country — never at the site.</p>
         <p>Energy Decisions, AI Enhanced.</p>
       </div>
     </div>
@@ -848,7 +847,7 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
     <!-- Flagship projects — ten locked exemplars -->
     <div class="records-head">
       <h3 id="records-title">Flagship projects</h3>
-      <p>Ten chosen from 300+ projects · region-level and band-level by design · no client names</p>
+      <p>Ten chosen from 300+ projects · country-level and band-level by design · no client names</p>
     </div>
     <p class="rec-status" id="recStatus" aria-live="polite">Ten flagships · all regions</p>
     <div class="records" id="records" aria-labelledby="records-title">
@@ -2140,7 +2139,7 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
       return e;
     }
     var svg = mk("svg", { viewBox: "0 0 " + W + " " + H, role: "group",
-      "aria-label": "World map of the founder's project record. One dot for each of 300 plus projects, placed within its country, not at its site. Dot size tracks project capacity. Gold dots are the ten flagship records — select one to open its record card. Use the group buttons below the map to filter by region." });
+      "aria-label": "World map of the founder's project record. One dot for each of 300 plus projects, placed by country and never at the site. Dot size tracks project capacity. Gold dots are the ten flagship records — select one to open its record card. Use the group buttons below the map to filter by world region." });
 
     var base = mk("g", { "aria-hidden": "true" }, svg);
     mk("path", { "class": "atlas-grat", d: path(d3.geoGraticule().step([30, 30])()) }, base);
