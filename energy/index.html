@@ -289,13 +289,23 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
 }
 @keyframes fsPulse{0%,100%{transform:scale(1);opacity:.26}50%{transform:scale(1.55);opacity:.07}}
 .fs-focus{fill:none;stroke:var(--oxblood);stroke-width:1.6;opacity:0;pointer-events:none}
+.fs-hit{fill:transparent}
 .fs-mark:focus-visible .fs-focus{opacity:1}
 .fs-mark:hover .fs-dot{stroke:var(--gold-bright)}
 .atlas.is-zoned .fs-mark{opacity:.28;transition:opacity .35s ease}
 .atlas.is-zoned .fs-mark.in-zone{opacity:1}
-.atlas-legend text{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;fill:#7A756A}
-.atlas-legend .sz{fill:var(--ink);fill-opacity:.42}
-.atlas-legend .fsz{fill:var(--gold);stroke:#FAF8F2;stroke-width:1}
+/* --- legend bar — HTML chrome, visible at every width (full ladder + flagship) --- */
+.atlas-legend-bar{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;
+  padding:10px 22px;border-top:1px solid var(--hairline);
+  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--ink-soft);
+}
+.alb-item{display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.alb-ramp{width:96px;height:22px;flex:0 0 auto}
+.alb-ramp circle{fill:var(--ink);fill-opacity:.42}
+.alb-gold{width:14px;height:14px;flex:0 0 auto}
+.alb-gold circle{fill:var(--gold);stroke:#FAF8F2;stroke-width:1}
 /* --- region strip — always-available filter control (44px targets) --- */
 .atlas-strip{display:flex;flex-wrap:wrap;border-top:1px solid var(--hairline)}
 .atlas-strip button{
@@ -604,7 +614,8 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
 @media (max-width:620px){
   .atlas-head,.atlas-foot{flex-direction:column;gap:4px}
   .atlas-head span:last-child,.atlas-foot p:last-child{text-align:left}
-  .atlas-legend,.zone-label{display:none}
+  .zone-label text{font-size:19px;letter-spacing:.1em;stroke-width:4.5px}
+  .atlas-legend-bar{gap:6px 18px;padding:10px 16px;font-size:0.56rem}
   .atlas-strip button{font-size:0.58rem;padding:12px 6px}
   .c14-stage{aspect-ratio:1000 / 700}
   .c14-beat{max-width:86%}
@@ -804,28 +815,32 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
       </div>
     </div>
 
-    <!-- Atlas slot — bounded plate. The track-record atlas: one mark per project,
-         placed by density (hybrid rule), sized by capacity band. Map built by JS
-         into the stage; the region strip is the always-available filter control. -->
+    <!-- Atlas slot — bounded plate. The track-record atlas: one dot per register
+         project, true-country, site-random within the country (2026-08-01 afternoon
+         amendment). Dot size tracks project capacity on a 12-class quantized ladder.
+         Map built by JS into the stage; the group strip is the always-available
+         filter control at every width. -->
     <div class="atlas" id="atlas" data-atlas-slot>
       <div class="atlas-head">
         <span>The record, mapped</span>
-        <span>Eight regions · select to filter</span>
+        <span>Six regions · select to filter</span>
       </div>
       <div class="atlas-stage" id="atlasStage"></div>
-      <div class="atlas-strip" role="group" aria-label="Regions of the record — select to filter the flagship records">
+      <div class="atlas-legend-bar" aria-hidden="true">
+        <span class="alb-item"><svg class="alb-ramp" viewBox="0 0 96 22" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="14" r="1.5"/><circle cx="16" cy="14" r="2.15"/><circle cx="28" cy="14" r="3.1"/><circle cx="43" cy="14" r="4.45"/><circle cx="61" cy="14" r="6.4"/><circle cx="84" cy="14" r="9.2"/></svg>Dot size tracks project capacity</span>
+        <span class="alb-item"><svg class="alb-gold" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="4.6"/></svg>Flagship — opens its record card</span>
+      </div>
+      <div class="atlas-strip" role="group" aria-label="Continental groups of the record — select to filter the flagship records">
         <button class="atlas-world" id="atlasWorld" type="button" aria-pressed="true">World</button>
-        <button class="atlas-region" type="button" data-region="gcc" aria-pressed="false">GCC</button>
-        <button class="atlas-region" type="button" data-region="australia" aria-pressed="false">Australia</button>
-        <button class="atlas-region" type="button" data-region="north-africa" aria-pressed="false">North Africa</button>
-        <button class="atlas-region" type="button" data-region="italy" aria-pressed="false">Italy</button>
-        <button class="atlas-region" type="button" data-region="west-africa" aria-pressed="false">West Africa</button>
-        <button class="atlas-region" type="button" data-region="caribbean" aria-pressed="false">Caribbean</button>
-        <button class="atlas-region" type="button" data-region="south-asia" aria-pressed="false">South Asia</button>
-        <button class="atlas-region" type="button" data-region="north-america" aria-pressed="false">Americas</button>
+        <button class="atlas-region" type="button" data-region="americas" aria-pressed="false">Americas</button>
+        <button class="atlas-region" type="button" data-region="europe" aria-pressed="false">Europe</button>
+        <button class="atlas-region" type="button" data-region="africa" aria-pressed="false">Africa</button>
+        <button class="atlas-region" type="button" data-region="middle-east" aria-pressed="false">Middle East</button>
+        <button class="atlas-region" type="button" data-region="asia" aria-pressed="false">Asia</button>
+        <button class="atlas-region" type="button" data-region="australia-pacific" aria-pressed="false">Australia &amp; Pacific</button>
       </div>
       <div class="atlas-foot">
-        <p>Marks placed within countries or regions by density, never at sites.</p>
+        <p>One dot per project — placed within its country, not at its site.</p>
         <p>Energy Decisions, AI Enhanced.</p>
       </div>
     </div>
@@ -1431,11 +1446,17 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
   }
 
   /* region filter — atlas index and record cards share one state */
-  var REGION_NAMES = {
-    "gcc":"GCC","australia":"Australia","north-africa":"North Africa","italy":"Italy",
-    "west-africa":"West Africa","caribbean":"Caribbean","south-asia":"South Asia","north-america":"Americas"
+  /* six continental groups (2026-08-01 afternoon amendment). Card chips keep
+     their locked region text but filter under their group. */
+  var GROUP_NAMES = {
+    "americas":"Americas","europe":"Europe","africa":"Africa",
+    "middle-east":"Middle East","asia":"Asia","australia-pacific":"Australia & Pacific"
   };
-  var active = null;
+  var GROUP_OF_CARD = {
+    "gcc":"middle-east","north-africa":"africa","west-africa":"africa","italy":"europe",
+    "caribbean":"americas","south-asia":"asia","australia":"australia-pacific","north-america":"americas"
+  };
+  var active = null; /* a group key, or null (world) */
   var atlasEl = document.getElementById("atlas");
   var worldBtn = document.getElementById("atlasWorld");
 
@@ -1443,7 +1464,7 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
     records.classList.toggle("is-filtered", !!active);
     var hits = 0;
     cards.forEach(function(card){
-      var hit = active && card.getAttribute("data-region") === active;
+      var hit = active && GROUP_OF_CARD[card.getAttribute("data-region")] === active;
       card.classList.toggle("is-hit", !!hit);
       if(hit) hits++;
     });
@@ -1451,11 +1472,11 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
       b.setAttribute("aria-pressed", b.getAttribute("data-region") === active ? "true" : "false");
     });
     cardButtons.forEach(function(b){
-      b.setAttribute("aria-pressed", b.getAttribute("data-region") === active ? "true" : "false");
+      b.setAttribute("aria-pressed", GROUP_OF_CARD[b.getAttribute("data-region")] === active ? "true" : "false");
     });
     if(worldBtn) worldBtn.setAttribute("aria-pressed", active ? "false" : "true");
     if(active){
-      status.textContent = REGION_NAMES[active] + " · " + hits + " of 10 flagships ";
+      status.textContent = GROUP_NAMES[active] + " · " + hits + " of 10 flagships ";
       var clear = document.createElement("button");
       clear.className = "rec-clear";
       clear.type = "button";
@@ -1495,13 +1516,13 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
   cardButtons.forEach(function(b){
     b.addEventListener("click", function(ev){
       ev.stopPropagation();
-      toggle(b.getAttribute("data-region"), "card");
+      toggle(GROUP_OF_CARD[b.getAttribute("data-region")], "card");
     });
   });
   cards.forEach(function(card){
     card.addEventListener("click", function(ev){
       if(ev.target.closest("button")) return;
-      toggle(card.getAttribute("data-region"), "card");
+      toggle(GROUP_OF_CARD[card.getAttribute("data-region")], "card");
     });
   });
 })();
@@ -1920,12 +1941,12 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
 <script src="/assets/vendor/topojson-client.min.js"></script>
 <script>
 /* ============ Track-record atlas — the map inside the plate ============
-   One mark per register project (zoned set), placed by the hybrid density
-   rule: inside its country only where that country holds three or more
-   projects, otherwise blurred to the regional zone. Sized by capacity band.
+   One dot per register project — true-country, site-random within the
+   country polygon (2026-08-01 afternoon amendment; LC waiver logged).
+   Dot size tracks project capacity via a 12-class quantized ladder.
    Deterministic seeded placement — no unseeded randomness anywhere.
-   Drives the existing data-region filter machinery via atlas:toggle /
-   atlas:state events; never forks it. */
+   Six continental groups drive the existing data-region filter machinery
+   via atlas:toggle / atlas:state events; never forks it. */
 (function(){
   "use strict";
   if (typeof d3 === "undefined" || typeof topojson === "undefined") return;
@@ -1936,37 +1957,19 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var NS = "http://www.w3.org/2000/svg";
 
-  /* map zone <-> existing filter contract (Americas is a map-layer grouping;
-     the record grid keeps its locked north-america key) */
-  var FILTER_OF_ZONE = { "americas": "north-america" };
-  var ZONE_OF_FILTER = { "north-america": "americas" };
-  function filterOf(z){ return FILTER_OF_ZONE[z] || z; }
-  function zoneOf(f){ return ZONE_OF_FILTER[f] || f; }
-
-  /* zone-blob anchors [lon, lat, sigma-degrees] — region-level by design */
-  var BLOBS = {
-    "gcc":          [51,   24.5, 2.6],
-    "north-africa": [8,    28,   4.0],
-    "west-africa":  [-6,   12,   4.2],
-    "caribbean":    [-71,  19,   3.2],
-    "italy":        [12.5, 42.8, 1.4],
-    "south-asia":   [73,   25,   3.2],
-    "australia":    [134, -25,   6.0],
-    "americas":     [-79,  6,    6.5]
-  };
-  /* zone label anchors [lon, lat] — water / empty-interior placements */
+  /* group label anchors [lon, lat] — water / empty-interior placements */
   var LABEL_AT = {
-    "gcc":          [54,  14.5],
-    "north-africa": [8,   24.5],
-    "west-africa":  [-17, 4.5],
-    "caribbean":    [-66, 25.5],
-    "italy":        [7.5, 37.8],
-    "south-asia":   [80,  32.5],
-    "australia":    [133, -38.5],
-    "americas":     [-88, -6]
+    "americas":          [-96, -14],
+    "europe":            [-20, 49],
+    "africa":            [-12, -21],
+    "middle-east":       [58, 9.5],
+    "asia":              [100, 37],
+    "australia-pacific": [132, -41.5]
   };
-  var R_BAND = { 1: 2.1, 2: 2.8, 3: 3.7, 4: 5.0, 5: 6.6 };
-  var FS_R = 5.2, FS_HALO = 10.5, FS_FOCUS = 8.6;
+
+  /* 12-class radius ladder — geometric 1.5 -> 10.5 (classes quantize log-MW) */
+  var R_CLASS = [];
+  for (var k = 0; k < 12; k++) R_CLASS.push(Math.min(10.5, 1.5 * Math.pow(7, k / 11)));
 
   /* deterministic PRNG — fixed seed, single stream, fixed consumption order */
   function mulberry32(seed){
@@ -2003,75 +2006,55 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
     var H = Math.ceil(b[1][1] - b[0][1] + 2 * M);
     proj.fitExtent([[M, M], [W - M, H - M]], fitFC);
 
-    /* ---- samplers ---- */
+    /* ---- samplers (antimeridian-safe geo bounds) ---- */
     function sampleInFeature(f){
       var gb = d3.geoBounds(f);
+      var w = gb[0][0], e = gb[1][0], s = gb[0][1], n = gb[1][1];
+      var span = e - w; if (span < 0) span += 360;
       for (var i = 0; i < 60; i++){
-        var lon = gb[0][0] + rng() * (gb[1][0] - gb[0][0]);
-        var lat = gb[0][1] + rng() * (gb[1][1] - gb[0][1]);
+        var lon = w + rng() * span; if (lon > 180) lon -= 360;
+        var lat = s + rng() * (n - s);
         if (d3.geoContains(f, [lon, lat])) return [lon, lat];
       }
       return d3.geoCentroid(f);
     }
-    function sampleBlob(zone, sigmaScale){
-      var B = BLOBS[zone], s = B[2] * (sigmaScale || 1);
-      for (var i = 0; i < 40; i++){
-        var u = Math.max(rng(), 1e-9), v = rng();
-        var lon = B[0] + Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v) * s;
-        var lat = B[1] + Math.sqrt(-2 * Math.log(u)) * Math.sin(2 * Math.PI * v) * s * 0.8;
-        if (lat > -55 && lat < 82 && d3.geoContains(land, [lon, lat])) return [lon, lat];
-      }
-      return [B[0], B[1]];
+    /* true-country placement for every dot; tiny-island fallbacks jitter
+       around the country's reference coordinate */
+    function place(loc){
+      var iso = data.iso[loc];
+      if (iso.ll) return [iso.ll[0] + (rng() - 0.5) * 2.4, iso.ll[1] + (rng() - 0.5) * 2.4];
+      return sampleInFeature(byId[iso.id]);
     }
 
-    /* ---- flagship set — read from the locked record cards ---- */
-    var cardEls = Array.prototype.slice.call(document.querySelectorAll("#records .record"));
-    var flagships = cardEls.map(function(card, i){
-      var region = card.getAttribute("data-region");
-      var chip = card.querySelector(".rec-region");
-      return { card: card, idx: i, region: region, zone: zoneOf(region),
-               name: chip ? chip.textContent : region };
-    });
-
-    /* one density mark per flagship is claimed from its zone (dot total stays
-       equal to the zoned project count — nothing double-drawn) */
-    var claims = {};
-    flagships.forEach(function(f){ claims[f.zone] = (claims[f.zone] || 0) + 1; });
-
-    /* ---- density marks ---- */
+    /* ---- density marks — all true-country ---- */
     var pts = [];
     data.marks.forEach(function(mk){
-      var zone, iso = data.iso[mk.loc];
-      zone = iso ? iso.zone : mk.loc;
-      if (claims[zone] > 0){ claims[zone]--; return; }
-      var ll = iso ? sampleInFeature(byId[iso.id]) : sampleBlob(zone, 1);
+      var ll = place(mk.loc);
       var p = proj(ll);
       if (!p) return;
-      pts.push({ x: p[0], y: p[1], r: R_BAND[mk.band] || 2.5, zone: zone, fixed: false });
+      pts.push({ x: p[0], y: p[1], r: R_CLASS[(mk.band || 1) - 1], group: data.iso[mk.loc].group,
+                 feat: data.iso[mk.loc].ll ? null : byId[data.iso[mk.loc].id], fixed: false });
     });
 
-    /* ---- flagship marks (deterministic; in-country only for Italy & Australia,
-            zones with >=3-project countries per the hybrid rule) ---- */
+    /* ---- flagship marks — each flagship's dot IS its project's dot ---- */
+    var cardEls = Array.prototype.slice.call(document.querySelectorAll("#records .record"));
     var fsPlaced = {};
-    flagships.forEach(function(f){
+    var flagships = data.flagships.map(function(t, i){
+      var card = cardEls[i];
+      var chip = card ? card.querySelector(".rec-region") : null;
       var ll, attempts = 0;
-      do {
-        if (f.zone === "italy" || f.zone === "australia"){
-          var iso3 = f.zone === "italy" ? "ITA" : "AUS";
-          ll = sampleInFeature(byId[data.iso[iso3].id]);
-        } else {
-          ll = sampleBlob(f.zone, 0.55);
-        }
-        attempts++;
-      } while (tooClose(ll, f.zone) && attempts < 30);
-      (fsPlaced[f.zone] = fsPlaced[f.zone] || []).push(ll);
+      do { ll = place(t.loc); attempts++; } while (tooClose(ll, t.loc) && attempts < 30);
+      (fsPlaced[t.loc] = fsPlaced[t.loc] || []).push(ll);
       var p = proj(ll);
-      f.x = p[0]; f.y = p[1];
-      pts.push({ x: p[0], y: p[1], r: FS_R, zone: f.zone, fixed: true, fs: f });
+      var f = { card: card, idx: i, loc: t.loc, group: data.iso[t.loc].group,
+                r: R_CLASS[(t.band || 1) - 1], x: p[0], y: p[1],
+                name: chip ? chip.textContent : "" };
+      pts.push({ x: f.x, y: f.y, r: f.r, group: f.group, fixed: true });
+      return f;
     });
-    function tooClose(ll, zone){
+    function tooClose(ll, loc){
       var p = proj(ll);
-      return (fsPlaced[zone] || []).some(function(o){
+      return (fsPlaced[loc] || []).some(function(o){
         var q = proj(o), dx = p[0] - q[0], dy = p[1] - q[1];
         return dx * dx + dy * dy < 34 * 34;
       });
@@ -2105,31 +2088,44 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
       });
     }
 
-    /* land-snap — relaxation may not push an on-land mark into open water;
-       marks whose sampled origin was already off-land (island fallbacks) stay */
+    /* country-snap — placement is country-true: relaxation may not push a dot
+       out of its own country. Dots walk back toward their sampled origin until
+       re-contained; island-fallback dots (no polygon) stay put. */
     pts.forEach(function(p){
-      if (p.fixed) return;
-      if (d3.geoContains(land, proj.invert([p.x, p.y]))) return;
-      if (!d3.geoContains(land, proj.invert([p.ox, p.oy]))) return;
+      if (p.fixed || !p.feat) return;
+      if (d3.geoContains(p.feat, proj.invert([p.x, p.y]))) return;
+      if (!d3.geoContains(p.feat, proj.invert([p.ox, p.oy]))){ return; }
       for (var s = 1; s <= 6; s++){
         var t = s / 6;
         var x = p.x + (p.ox - p.x) * t, y = p.y + (p.oy - p.y) * t;
-        if (d3.geoContains(land, proj.invert([x, y]))){ p.x = x; p.y = y; break; }
+        if (d3.geoContains(p.feat, proj.invert([x, y]))){ p.x = x; p.y = y; break; }
         if (s === 6){ p.x = p.ox; p.y = p.oy; }
       }
     });
 
-    /* ---- zone extents (hit areas, selection rings) ---- */
-    var zoneExt = {};
-    pts.forEach(function(p){
-      var e = zoneExt[p.zone] || (zoneExt[p.zone] = { x0: 1e9, y0: 1e9, x1: -1e9, y1: -1e9 });
-      e.x0 = Math.min(e.x0, p.x); e.y0 = Math.min(e.y0, p.y);
-      e.x1 = Math.max(e.x1, p.x); e.y1 = Math.max(e.y1, p.y);
-    });
-    var zoneShape = {};
-    Object.keys(zoneExt).forEach(function(z){
-      var e = zoneExt[z];
-      zoneShape[z] = {
+    /* ---- group extents (hit areas, selection rings) — robust to far-flung
+            island dots: trim points >320 units from the group mean, twice ---- */
+    var groupPts = {};
+    pts.forEach(function(p){ (groupPts[p.group] = groupPts[p.group] || []).push(p); });
+    var groupShape = {};
+    Object.keys(groupPts).forEach(function(g){
+      var kept = groupPts[g];
+      for (var pass = 0; pass < 2; pass++){
+        var mx = 0, my = 0;
+        kept.forEach(function(p){ mx += p.x; my += p.y; });
+        mx /= kept.length; my /= kept.length;
+        var next = kept.filter(function(p){
+          var dx = p.x - mx, dy = p.y - my;
+          return dx * dx + dy * dy <= 320 * 320;
+        });
+        if (next.length >= 3) kept = next;
+      }
+      var e = { x0: 1e9, y0: 1e9, x1: -1e9, y1: -1e9 };
+      kept.forEach(function(p){
+        e.x0 = Math.min(e.x0, p.x); e.y0 = Math.min(e.y0, p.y);
+        e.x1 = Math.max(e.x1, p.x); e.y1 = Math.max(e.y1, p.y);
+      });
+      groupShape[g] = {
         cx: (e.x0 + e.x1) / 2, cy: (e.y0 + e.y1) / 2,
         rx: Math.max((e.x1 - e.x0) / 2 + 16, 26),
         ry: Math.max((e.y1 - e.y0) / 2 + 14, 22)
@@ -2139,12 +2135,12 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
     /* ---- build the SVG ---- */
     function mk(name, attrs, parent){
       var e = document.createElementNS(NS, name);
-      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      for (var k2 in attrs) e.setAttribute(k2, attrs[k2]);
       if (parent) parent.appendChild(e);
       return e;
     }
     var svg = mk("svg", { viewBox: "0 0 " + W + " " + H, role: "group",
-      "aria-label": "World map of the founder's project record. Marks are placed within countries or regions by density, never at sites; mark size reflects capacity band. Gold marks are the ten flagship records — select one to open its record card. Use the region buttons below the map to filter by region." });
+      "aria-label": "World map of the founder's project record. One dot for each of 300 plus projects, placed within its country, not at its site. Dot size tracks project capacity. Gold dots are the ten flagship records — select one to open its record card. Use the group buttons below the map to filter by region." });
 
     var base = mk("g", { "aria-hidden": "true" }, svg);
     mk("path", { "class": "atlas-grat", d: path(d3.geoGraticule().step([30, 30])()) }, base);
@@ -2160,43 +2156,45 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
     var markEls = [];
     pts.forEach(function(p){
       if (p.fixed) return;
-      var c = mk("circle", { "class": "atlas-mark", cx: p.x.toFixed(1), cy: p.y.toFixed(1),
-        r: p.r, "data-zone": p.zone }, gMarks);
-      markEls.push(c);
+      markEls.push(mk("circle", { "class": "atlas-mark", cx: p.x.toFixed(1), cy: p.y.toFixed(1),
+        r: p.r.toFixed(2), "data-zone": p.group }, gMarks));
     });
 
     var ringEls = {}, labelEls = {};
-    Object.keys(zoneShape).sort(function(a, b){
-      var A = zoneShape[a], B = zoneShape[b];
-      return (B.rx * B.ry) - (A.rx * A.ry); /* big zones first: small hit-areas stay on top */
-    }).forEach(function(z){
-      var s = zoneShape[z];
-      ringEls[z] = mk("ellipse", { "class": "zone-ring", cx: s.cx.toFixed(1), cy: s.cy.toFixed(1),
+    Object.keys(groupShape).sort(function(a, b){
+      var A = groupShape[a], B = groupShape[b];
+      return (B.rx * B.ry) - (A.rx * A.ry); /* big groups first: small hit-areas stay on top */
+    }).forEach(function(g){
+      var s = groupShape[g];
+      ringEls[g] = mk("ellipse", { "class": "zone-ring", cx: s.cx.toFixed(1), cy: s.cy.toFixed(1),
         rx: s.rx.toFixed(1), ry: s.ry.toFixed(1) }, gRings);
       var hit = mk("ellipse", { "class": "zone-hit", cx: s.cx.toFixed(1), cy: s.cy.toFixed(1),
         rx: s.rx.toFixed(1), ry: s.ry.toFixed(1) }, gHits);
-      hit.addEventListener("click", function(){ dispatchToggle(z); });
+      hit.addEventListener("click", function(){ dispatchToggle(g); });
     });
 
-    Object.keys(LABEL_AT).forEach(function(z){
-      if (!zoneShape[z]) return;
-      var p = proj(LABEL_AT[z]);
-      var g = mk("g", { "class": "zone-label", "data-zone": z }, gLabels);
-      var t = mk("text", { x: p[0].toFixed(1), y: p[1].toFixed(1), "text-anchor": "middle" }, g);
-      t.textContent = (data.regions.filter(function(r){ return r.key === z; })[0] || { label: z }).label.toUpperCase();
-      g.addEventListener("click", function(){ dispatchToggle(z); });
-      labelEls[z] = g;
+    Object.keys(LABEL_AT).forEach(function(g){
+      if (!groupShape[g]) return;
+      var p = proj(LABEL_AT[g]);
+      var gEl = mk("g", { "class": "zone-label", "data-zone": g }, gLabels);
+      var t = mk("text", { x: p[0].toFixed(1), y: p[1].toFixed(1), "text-anchor": "middle" }, gEl);
+      t.textContent = (data.groups.filter(function(r){ return r.key === g; })[0] || { label: g }).label.toUpperCase();
+      gEl.addEventListener("click", function(){ dispatchToggle(g); });
+      labelEls[g] = gEl;
     });
 
-    /* flagship marks — the only interactive marks */
+    /* flagship marks — the only interactive marks; hit target padded beyond
+       the honest dot radius */
     flagships.forEach(function(f, i){
-      var g = mk("g", { "class": "fs-mark", "data-zone": f.zone, tabindex: "0", role: "button",
+      var g = mk("g", { "class": "fs-mark", "data-zone": f.group, tabindex: "0", role: "button",
         "aria-label": "Flagship " + String(i + 1).padStart(2, "0") + " · " + f.name + " — view the record card" }, gFs);
-      mk("circle", { "class": "fs-halo", cx: f.x.toFixed(1), cy: f.y.toFixed(1), r: FS_HALO }, g);
-      mk("circle", { "class": "fs-focus", cx: f.x.toFixed(1), cy: f.y.toFixed(1), r: FS_FOCUS }, g);
-      mk("circle", { "class": "fs-dot", cx: f.x.toFixed(1), cy: f.y.toFixed(1), r: FS_R }, g);
-      f.card.setAttribute("tabindex", "-1");
+      mk("circle", { "class": "fs-halo", cx: f.x.toFixed(1), cy: f.y.toFixed(1), r: (f.r + 4.5).toFixed(1) }, g);
+      mk("circle", { "class": "fs-focus", cx: f.x.toFixed(1), cy: f.y.toFixed(1), r: (f.r + 3).toFixed(1) }, g);
+      mk("circle", { "class": "fs-hit", cx: f.x.toFixed(1), cy: f.y.toFixed(1), r: Math.max(f.r + 6, 12).toFixed(1) }, g);
+      mk("circle", { "class": "fs-dot", cx: f.x.toFixed(1), cy: f.y.toFixed(1), r: f.r.toFixed(2) }, g);
+      if (f.card) f.card.setAttribute("tabindex", "-1");
       function jump(){
+        if (!f.card) return;
         f.card.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
         cardEls.forEach(function(c){ c.classList.remove("is-spot"); });
         f.card.classList.add("is-spot");
@@ -2210,19 +2208,6 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
       });
     });
 
-    /* legend — sizes are bands, gold is flagship; no values anywhere */
-    var legend = mk("g", { "class": "atlas-legend", "aria-hidden": "true" }, svg);
-    var lx = 16, ly = H - 16;
-    [2.1, 2.8, 3.7, 5.0].forEach(function(r){
-      mk("circle", { "class": "sz", cx: lx + r, cy: ly - r, r: r }, legend);
-      lx += r * 2 + 7;
-    });
-    var lt = mk("text", { x: lx + 4, y: ly - 2 }, legend);
-    lt.textContent = "CAPACITY BAND";
-    mk("circle", { "class": "fsz", cx: lx + 136, cy: ly - 4.4, r: 4.4 }, legend);
-    var lt2 = mk("text", { x: lx + 146, y: ly - 2 }, legend);
-    lt2.textContent = "FLAGSHIP";
-
     /* empty-map click resets */
     svg.addEventListener("click", function(ev){
       if (ev.target === svg || ev.target.parentNode === base){
@@ -2232,28 +2217,27 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
 
     stage.appendChild(svg);
 
-    function dispatchToggle(zone){
+    function dispatchToggle(group){
       document.dispatchEvent(new CustomEvent("atlas:toggle",
-        { detail: { region: filterOf(zone), source: "map" } }));
+        { detail: { region: group, source: "map" } }));
     }
 
     /* ---- selection state on the map ---- */
-    function paintZone(filterKey){
-      var zone = filterKey ? zoneOf(filterKey) : null;
-      atlasEl.classList.toggle("is-zoned", !!zone);
-      markEls.forEach(function(c){ c.classList.toggle("in-zone", c.getAttribute("data-zone") === zone); });
-      Object.keys(ringEls).forEach(function(z){ ringEls[z].classList.toggle("on", z === zone); });
-      Object.keys(labelEls).forEach(function(z){ labelEls[z].classList.toggle("on", z === zone); });
-      Array.prototype.forEach.call(gFs.children, function(g){
-        g.classList.toggle("in-zone", g.getAttribute("data-zone") === zone);
+    function paintZone(group){
+      atlasEl.classList.toggle("is-zoned", !!group);
+      markEls.forEach(function(c){ c.classList.toggle("in-zone", c.getAttribute("data-zone") === group); });
+      Object.keys(ringEls).forEach(function(z){ ringEls[z].classList.toggle("on", z === group); });
+      Object.keys(labelEls).forEach(function(z){ labelEls[z].classList.toggle("on", z === group); });
+      Array.prototype.forEach.call(gFs.children, function(gg){
+        gg.classList.toggle("in-zone", gg.getAttribute("data-zone") === group);
       });
     }
 
     /* ---- counters — counts exact, capacity banded, years fixed ---- */
     var vals = apex.querySelectorAll(".apex-value");
     var cellGw = vals[0], cellC = vals[1], cellP = vals[2]; /* vals[3] = 15+ years, never touched */
-    var regionByFilter = {};
-    data.regions.forEach(function(r){ regionByFilter[filterOf(r.key)] = r; });
+    var groupByKey = {};
+    data.groups.forEach(function(r){ groupByKey[r.key] = r; });
     var anims = {};
     function morphNum(cell, key, target, suffix){
       if (anims[key]) cancelAnimationFrame(anims[key]);
@@ -2283,11 +2267,11 @@ section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
         [{ opacity: 0, transform: "translateY(7px)" }, { opacity: 1, transform: "none" }],
         { duration: 380, easing: "ease-out" });
     }
-    function paintCounters(filterKey){
-      if (filterKey && regionByFilter[filterKey]){
-        var r = regionByFilter[filterKey];
+    function paintCounters(groupKey){
+      if (groupKey && groupByKey[groupKey]){
+        var r = groupByKey[groupKey];
         apex.dataset.mode = "region";
-        swapGw(r.gwBand || "—", true);
+        swapGw(r.gwBand, true);
         morphNum(cellC, "c", r.countries, "");
         morphNum(cellP, "p", r.projects, "");
       } else {
