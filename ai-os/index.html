@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<!--
+  /ai-os/ : the NHNCD AI Operating System, pilot page (unlinked preview, noindex).
+  Built 27 Sep 2026 with the scroll-craft skill (engine vendored under /assets/vendor/,
+  MIT, never edited per project) themed to the site's own tokens.
+  Grammar: chaptered editorial. Four chapters on hard-cut grounds (ink, paper, paper, ink),
+  one pinned peak (one day in the OS), a masthead close. Signature move: the same eleven
+  dots recur in every chapter and connect into the day.
+  Copy discipline: every value on this page traces to a file in the NHNCD OS; the PR body
+  carries the audit. No client, partner or adviser names. No prices. No dash punctuation.
+  Keep: the ground-per-chapter rule (no drift), the reduced-motion resting states, the
+  real-markup timeline (an ordered list the script positions; it reads as a list without JS).
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>NHNCD AI Operating System</title>
+  <meta name="description" content="A company that runs on its own operating system. NHNCD runs its knowledge work on files that AI agents act on, under written rules, every day. The issue, the idea, the installation, and one day of it running.">
+  <link rel="canonical" href="https://nhncd.ai/ai-os/">
+  <meta name="theme-color" content="#14181A">
+  <meta property="og:title" content="NHNCD AI Operating System">
+  <meta property="og:description" content="A company that runs on its own operating system. The issue, the idea, the installation, and one day of it running.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nhncd.ai/ai-os/">
+  <meta property="og:image" content="https://nhncd.ai/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="NHNCD">
+  <meta property="og:image:alt" content="NHNCD wordmark with the line Be Enhanced by AI. on an off-white ground">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nhncd.ai/assets/og-image.png">
+  <meta name="twitter:image:alt" content="NHNCD wordmark with the line Be Enhanced by AI. on an off-white ground">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon_48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_180.png">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/inter-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/space-grotesk-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/ibm-plex-mono-400-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/ibm-plex-mono-500-latin.woff2">
+  <link rel="stylesheet" href="/assets/vendor/scrollcraft.css">
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url('/assets/fonts/inter-latin.woff2') format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400 700;font-display:swap;src:url('/assets/fonts/space-grotesk-latin.woff2') format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/ibm-plex-mono-400-latin.woff2') format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/ibm-plex-mono-500-latin.woff2') format('woff2')}
+/* ============ NHNCD brand system ============
+   Light Letterhead (nhncd.ai) / dark Ink (NHNCD.energy)
+   Palette: Deep Oxblood #7E2632 · Oxblood Bright #CC5F73 ·
+   Warm Gold #B8862F (hairline detail only) · Ink #14181A · Off-White #F4F2EC ·
+   Energy Green #2F6B52 light / #489B76 ink · Vision Petrol #2E5F73 light / #5C9BB3 ink */
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --oxblood:#7E2632;
+  --oxblood-bright:#CC5F73;
+  --gold:#B8862F;
+  --gold-bright:#D9A441;
+  --ink:#14181A;
+  --paper:#F4F2EC;
+  --green-deep:#2F6B52;
+  --green-bright:#489B76;
+  --petrol-deep:#2E5F73;
+  --petrol-bright:#5C9BB3;
+  --ink-soft:#3A3F42;
+  --paper-soft:#C7C3B8;
+  --hairline:rgba(20,24,26,.18);
+  --hairline-ink:rgba(244,242,236,.16);
+  --panel-ink:#1B2023;
+  --sg:'Space Grotesk','Segoe UI',Arial,sans-serif;
+  --inter:'Inter',system-ui,'Segoe UI',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Consolas,'Courier New',monospace;
+
+  /* scroll-craft engine tokens, mapped to the site palette (ink ground by default).
+     The brand prohibits gradients, shadows and radii above 2px: zeroed here. */
+  --sc-canvas:var(--ink);
+  --sc-surface:var(--panel-ink);
+  --sc-ink:var(--paper);
+  --sc-ink-soft:var(--paper-soft);
+  --sc-accent:var(--oxblood-bright);
+  --sc-accent-ink:var(--ink);
+  --sc-font-display:var(--sg);
+  --sc-font-text:var(--inter);
+  --sc-font-mono:var(--mono);
+  --sc-r-sm:0;--sc-r-md:0;--sc-r-lg:0;--sc-r-pill:0;
+  --sc-e1:none;--sc-e2:none;--sc-e3:none;--sc-edge:none;
+  --sc-maxw:1080px;
+}
+
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  font-family:var(--inter);
+  font-size:1.0625rem;
+  line-height:1.7;
+  background:var(--ink);
+  color:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  letter-spacing:normal;
+}
+@supports (scrollbar-color:auto){html{scrollbar-color:auto;scrollbar-width:auto}}
+::selection{background:var(--oxblood);color:var(--paper)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--oxblood-bright);outline-offset:3px;border-radius:0}
+.theme-paper :focus-visible{outline-color:var(--oxblood)}
+
+.wrap{max-width:1080px;margin:0 auto;padding-left:26px;padding-right:26px;padding-left:clamp(20px,4vw,32px);padding-right:clamp(20px,4vw,32px)}
+.sr-only{
+  position:absolute!important;width:1px!important;height:1px!important;padding:0!important;
+  margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;border:0!important
+}
+
+/* ---------- wordmark ---------- */
+.wordmark{display:block;width:auto}
+.wordmark path{fill:currentColor}
+.wordmark .dot{fill:var(--oxblood)}
+.theme-ink .wordmark .dot{fill:var(--oxblood-bright)}
+
+/* ---------- type primitives ---------- */
+.rule{width:64px;height:2px;background:var(--oxblood);margin-bottom:26px}
+.theme-ink .rule{background:var(--oxblood-bright)}
+
+.eyebrow{
+  font-family:var(--mono);font-weight:500;font-size:0.72rem;
+  text-transform:uppercase;letter-spacing:0.2em;
+  color:var(--oxblood);margin-bottom:16px;
+}
+.theme-ink .eyebrow{color:var(--oxblood-bright)}
+
+.sec-title{
+  font-family:var(--sg);font-weight:700;
+  font-size:2rem;
+  font-size:clamp(1.7rem,3.2vw,2.35rem);
+  letter-spacing:-0.015em;line-height:1.12;
+  margin-bottom:24px;
+}
+.copy-limit{max-width:720px}
+.body-copy p{max-width:720px;margin-bottom:20px;color:var(--ink-soft)}
+.body-copy p:last-child{margin-bottom:0}
+.theme-ink .body-copy p{color:var(--paper-soft)}
+
+/* ---------- buttons & links ---------- */
+.btn{
+  display:inline-block;border-radius:0;border:1px solid transparent;
+  font-family:var(--sg);font-weight:700;font-size:1rem;
+  letter-spacing:0.01em;text-decoration:none;
+  padding:15px 30px;transition:background-color .15s ease,border-color .15s ease;
+}
+.btn-oxblood{background:var(--oxblood);color:var(--paper)}
+.btn-oxblood:hover{background:#69202A}
+/* on ink the brand's dark-ground accent carries the button (Oxblood Bright, ink text) */
+.theme-ink .btn-oxblood{background:var(--oxblood-bright);color:var(--ink)}
+.theme-ink .btn-oxblood:hover{background:var(--oxblood-bright);border-color:var(--paper)}
+.btn-sm{padding:10px 20px;font-size:0.9rem}
+
+
+.lede{
+  font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.65;
+  color:var(--ink-soft);max-width:660px;margin:28px 0 40px;
+}
+.theme-ink .lede{color:var(--paper-soft)}
+.cta-row{display:flex;align-items:center;gap:20px 34px;flex-wrap:wrap}
+.cta-quiet{font-size:0.98rem;color:var(--ink-soft)}
+.theme-ink .cta-quiet{color:var(--paper-soft)}
+
+/* ---------- header (the /energy/ nav2 pattern) ---------- */
+.nav2{border-bottom:1px solid var(--hairline-ink)}
+.nav-inner{
+  display:flex;align-items:center;flex-wrap:wrap;
+  gap:14px 28px;padding-top:20px;padding-bottom:20px;
+}
+.nav2 .nav-inner{padding-top:22px;padding-bottom:22px}
+.nav-home{color:var(--paper);display:block}
+.nav-home .wordmark{height:21px}
+.backlink{
+  margin-left:auto;font-family:var(--mono);font-weight:500;font-size:0.72rem;
+  text-transform:uppercase;letter-spacing:0.2em;
+  color:var(--paper-soft);text-decoration:none;padding-bottom:2px;
+  border-bottom:1px solid transparent;
+}
+.backlink:hover{color:var(--paper);border-bottom-color:var(--paper)}
+
+/* ---------- grounds: painted per chapter, hard cuts, no drift ---------- */
+.theme-ink{
+  background:var(--ink);color:var(--paper);
+  --sc-canvas:var(--ink);--sc-ink:var(--paper);--sc-ink-soft:var(--paper-soft);
+  --sc-accent:var(--oxblood-bright);--sc-accent-ink:var(--ink);
+}
+.theme-paper{
+  background:var(--paper);color:var(--ink);
+  --sc-canvas:var(--paper);--sc-ink:var(--ink);--sc-ink-soft:var(--ink-soft);
+  --sc-accent:var(--oxblood);--sc-accent-ink:var(--paper);
+}
+.theme-paper .sec-title{color:var(--ink)}
+.theme-ink .sec-title{color:var(--paper)}
+.chapter{padding:84px 0;padding:clamp(64px,9vw,108px) 0;position:relative}
+.theme-ink .chapter + .chapter{border-top:1px solid var(--hairline-ink)}
+.theme-paper .chapter + .chapter{border-top:1px solid var(--hairline)}
+
+/* ---------- the dot: the site's aperture-dot shape, reused as the page's motif ---------- */
+.apd{fill:var(--oxblood-bright)}
+.theme-paper .apd{fill:var(--oxblood)}
+
+/* ---------- hero: title page with three dot planes ---------- */
+.hero{position:relative;overflow:hidden;padding:104px 0;padding:clamp(88px,11vw,148px) 0 clamp(72px,9vw,120px)}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{
+  font-family:var(--sg);font-weight:700;
+  font-size:3.1rem;
+  font-size:clamp(2.3rem,5.6vw,3.9rem);
+  letter-spacing:-0.025em;line-height:1.06;max-width:760px;color:var(--paper);
+  text-wrap:balance;
+}
+.plane{position:absolute;inset:-12% 0;pointer-events:none}
+.plane svg{width:100%;height:100%;display:block}
+.plane--back{z-index:0;opacity:.55}
+.plane--mid{z-index:1}
+.plane--front{z-index:3;opacity:.9}
+@media (max-width:860px){.plane--mid{opacity:.35}.plane--front{opacity:.5}}
+.hero .lede{max-width:600px}
+
+/* ---------- chapter 1: the issue ---------- */
+.issue-list{list-style:none;max-width:820px;margin-top:8px;border-top:1px solid var(--hairline-ink)}
+.issue-list li{
+  display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);gap:8px 40px;
+  padding:26px 0;border-bottom:1px solid var(--hairline-ink);
+}
+.issue-list strong{font-family:var(--sg);font-weight:700;font-size:1.22rem;line-height:1.25;letter-spacing:-0.01em;color:var(--paper)}
+.issue-list span{color:var(--paper-soft);max-width:34rem;align-self:center}
+
+/* ---------- chapter 2: the idea (quiet) ---------- */
+.idea{padding:clamp(96px,14vw,180px) 0 clamp(88px,12vw,160px)}
+.idea .lead{
+  font-family:var(--sg);font-weight:700;font-size:clamp(1.8rem,3.6vw,2.7rem);
+  letter-spacing:-0.02em;line-height:1.12;max-width:20ch;color:var(--ink);text-wrap:balance;
+}
+.idea-field{width:100%;max-width:1000px;margin:clamp(40px,7vw,88px) auto;display:block}
+.idea-field svg{width:100%;height:auto;display:block}
+.idea-field .track{stroke:var(--oxblood);stroke-width:1.5;fill:none}
+.idea .support{max-width:44ch;color:var(--ink-soft);font-size:1.05rem;margin-left:auto;text-align:right}
+
+/* ---------- chapter 3: the solution ---------- */
+.landings{position:relative;margin:36px 0 12px;list-style:none;counter-reset:landing}
+.landings-line{position:relative;height:2px;background:var(--hairline);margin:0 0 30px}
+.landings-line i{position:absolute;top:50%;width:14px;height:14px;transform:translate(-50%,-50%);display:block;color:var(--oxblood)}
+.landings-line i svg{width:100%;height:100%;display:block}
+.landings ol{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 22px}
+.landings li{padding-right:6px}
+.landings .num{
+  display:block;font-family:var(--mono);font-weight:500;font-size:0.72rem;
+  letter-spacing:0.18em;color:var(--oxblood);margin-bottom:8px;
+}
+.landings h3{font-family:var(--sg);font-weight:700;font-size:1.08rem;line-height:1.25;letter-spacing:-0.01em;margin-bottom:8px;color:var(--ink)}
+.landings p{color:var(--ink-soft);font-size:0.95rem;line-height:1.55}
+.after-landings{max-width:720px;margin-top:34px;color:var(--ink-soft)}
+
+.parts{margin-top:64px;display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);gap:32px 56px;align-items:start}
+.parts h3{font-family:var(--sg);font-weight:700;font-size:1.35rem;letter-spacing:-0.012em;line-height:1.2;color:var(--ink)}
+.parts dl{border-top:1px solid var(--hairline)}
+.parts dl>div{display:grid;grid-template-columns:minmax(0,9rem) minmax(0,1fr);gap:6px 28px;padding:18px 0;border-bottom:1px solid var(--hairline)}
+.parts dt{font-family:var(--sg);font-weight:700;color:var(--ink)}
+.parts dd{color:var(--ink-soft);max-width:44rem}
+.parts ul{list-style:none;max-width:44rem}
+.parts ul li{padding:10px 0;border-bottom:1px solid var(--hairline);color:var(--ink-soft)}
+.parts ul li:first-child{border-top:1px solid var(--hairline)}
+.parts ul li strong{color:var(--ink);font-weight:600}
+.sequence{font-family:var(--sg);font-weight:700;font-size:clamp(1.15rem,2.2vw,1.55rem);letter-spacing:-0.012em;line-height:1.35;color:var(--ink);max-width:40ch}
+.sequence span{color:var(--oxblood);font-family:var(--mono);font-weight:500;font-size:0.8em;margin:0 .35em}
+.parts .note{color:var(--ink-soft);margin-top:14px;max-width:44rem}
+
+/* ---------- chapter 4: one day in the OS (the peak, pinned) ---------- */
+.day-stage{display:flex;flex-direction:column;background:var(--ink);color:var(--paper)}
+.day-stage .wrap{width:100%;display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+.day-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px 40px;padding-top:clamp(22px,4vh,44px);flex-wrap:wrap}
+.day-head .sec-title{margin-bottom:0;max-width:16ch}
+.day-clock{
+  font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums;
+  font-size:clamp(2rem,5.2vw,4rem);line-height:1;letter-spacing:-0.02em;color:var(--oxblood-bright);
+  min-width:5ch;text-align:right;
+}
+.day-clock.is-word{font-family:var(--sg);font-weight:700;font-size:clamp(1.3rem,3vw,2.3rem);letter-spacing:-0.015em;text-transform:none}
+.day-body{position:relative;flex:1 1 auto;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.day-field{position:relative;width:100%;height:clamp(200px,32vh,300px)}
+.day-field svg{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible}
+.day-field .track{stroke:var(--hairline-ink);stroke-width:2;fill:none}
+.day-field .lit{stroke:var(--oxblood-bright);stroke-width:2;fill:none}
+.day-field .beat{stroke:var(--oxblood-bright);stroke-width:6;fill:none;stroke-dasharray:1.5 22;opacity:0;transition:opacity .4s ease}
+.day-field .beat.on{opacity:.9}
+.day-field .hollow{fill:var(--ink);stroke:var(--paper-soft);stroke-width:1.2;opacity:.55}
+.day-field .apd{opacity:0;transition:opacity .28s ease}
+.day-field .apd.on{opacity:1}
+.day-list{list-style:none;position:absolute;inset:0;margin:0}
+.day-list li{
+  position:absolute;width:11rem;opacity:0;transition:opacity .3s ease,transform .3s ease;
+  transform:translate3d(-50%,4px,0);
+}
+.day-list li.lit{opacity:1;transform:translate3d(-50%,0,0)}
+.day-list li.above{text-align:center;transform:translate3d(-50%,4px,0)}
+.day-list li.below{text-align:center}
+.day-list li.first{transform:translate3d(0,4px,0);text-align:left}
+.day-list li.first.lit{transform:translate3d(0,0,0)}
+.day-list li.last{transform:translate3d(-100%,4px,0);text-align:right}
+.day-list li.last.lit{transform:translate3d(-100%,0,0)}
+.d-time{display:block;font-family:var(--mono);font-weight:500;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--oxblood-bright);margin-bottom:3px}
+.d-title{display:block;font-family:var(--sg);font-weight:700;font-size:0.98rem;line-height:1.2;letter-spacing:-0.01em;color:var(--paper)}
+.day-list li.past .d-title{color:var(--paper-soft)}
+.day-list li.past .d-time{color:var(--paper-soft)}
+.d-desc{display:none}
+.day-now{
+  min-height:6rem;max-width:40rem;padding:clamp(8px,2vh,20px) 0 clamp(18px,3vh,36px);
+  color:var(--paper-soft);font-size:clamp(1.05rem,1.7vw,1.3rem);line-height:1.55;
+}
+.day-now strong{color:var(--paper);font-family:var(--sg);font-weight:700;display:block;margin-bottom:6px;font-size:1.25em;letter-spacing:-0.012em}
+.day-now .end{color:var(--paper);font-size:clamp(1.45rem,2.6vw,2rem);letter-spacing:-0.018em;line-height:1.1;margin-bottom:10px}
+.day-list.no-js{position:static;margin-top:28px}
+.day-list.no-js li{position:static;opacity:1;transform:none;width:auto;text-align:left;padding:10px 0;border-bottom:1px solid var(--hairline-ink)}
+.day-list.no-js .d-desc{display:block;color:var(--paper-soft)}
+
+/* ---------- close: masthead plate ---------- */
+.close{padding:clamp(72px,10vw,120px) 0 0}
+.close .mast{color:var(--paper)}
+.close .mast .wordmark{height:clamp(22px,3vw,34px);margin-bottom:34px}
+.close .line{
+  font-family:var(--sg);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.5rem);
+  letter-spacing:-0.02em;line-height:1.12;max-width:22ch;color:var(--paper);text-wrap:balance;margin-bottom:34px;
+}
+.contact-line{margin-top:36px;font-family:var(--sg);font-weight:500;font-size:clamp(1.15rem,2vw,1.45rem)}
+.contact-line a{color:var(--paper);text-decoration:none;border-bottom:2px solid var(--oxblood-bright);padding-bottom:2px}
+.contact-line a:hover{color:var(--oxblood-bright)}
+.footer-ink{background:var(--ink);border-top:1px solid var(--gold);padding:44px 0 56px;color:var(--paper);margin-top:clamp(56px,8vw,96px)}
+.footer-ink .wordmark{height:15px;margin-bottom:22px;color:var(--paper)}
+.entity{
+  font-family:var(--mono);font-size:0.68rem;letter-spacing:0.06em;
+  line-height:2;color:#3F4447;max-width:860px;
+}
+.footer-ink .entity{color:#A9A59B}
+.footer-ink .entity a{color:#A9A59B}
+.footer-ink .entity a:hover{color:var(--oxblood-bright)}
+
+/* ---------- the folio rail (desktop only): four marks that connect as the chapters pass ---------- */
+.rail{
+  position:fixed;top:50%;transform:translateY(-50%);z-index:6;
+  right:calc((100% - 1080px) / 4 - 7px);
+  display:none;flex-direction:column;align-items:center;
+}
+@media (min-width:1260px){.rail{display:flex}}
+.rail a{display:block;width:14px;height:14px;position:relative}
+.rail a svg{width:100%;height:100%;display:block}
+.rail a .rm{fill:transparent;stroke:var(--paper-soft);stroke-width:8;transition:fill .25s ease,stroke .25s ease}
+.rail a.is-past .rm,.rail a.is-current .rm{fill:var(--oxblood-bright);stroke:var(--oxblood-bright)}
+.rail a:focus-visible{outline-offset:4px}
+.rail .seg{width:1px;height:40px;background:var(--hairline-ink);position:relative;overflow:hidden}
+.rail .seg::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;background:var(--oxblood-bright);transform:scaleY(0);transform-origin:top;transition:transform .5s ease}
+.rail .seg.is-on::after{transform:scaleY(1)}
+.rail[data-ground="paper"] a .rm{stroke:var(--ink-soft)}
+.rail[data-ground="paper"] a.is-past .rm,.rail[data-ground="paper"] a.is-current .rm{fill:var(--oxblood);stroke:var(--oxblood)}
+.rail[data-ground="paper"] .seg{background:var(--hairline)}
+.rail[data-ground="paper"] .seg::after{background:var(--oxblood)}
+.rail .label{position:absolute;right:22px;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:var(--mono);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--paper-soft);opacity:0;transition:opacity .2s ease}
+.rail a:hover .label,.rail a:focus-visible .label{opacity:1}
+.rail[data-ground="paper"] .label{color:var(--ink-soft)}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .landings ol{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 28px}
+  .landings-line{display:none}
+  .parts{grid-template-columns:1fr;gap:18px 0}
+}
+@media (max-width:860px){
+  .issue-list li{grid-template-columns:1fr;gap:6px}
+  .parts dl>div{grid-template-columns:1fr;gap:4px}
+  .idea .support{margin-left:0;text-align:left}
+  .day-head{align-items:flex-start;flex-direction:column;gap:10px;margin-bottom:14px}
+  .day-clock{text-align:left}
+  .day-field{height:auto;flex:1 1 auto;min-height:0}
+  .day-list li{width:auto;left:2.2rem!important;right:0;top:auto;transform:translate3d(0,4px,0)!important;text-align:left!important}
+  .day-list li.lit{transform:translate3d(0,0,0)!important}
+  .d-time{display:inline;margin-right:10px;margin-bottom:0}
+  .d-title{display:inline;font-size:0.95rem}
+  .day-now{min-height:6.6rem;font-size:0.95rem}
+}
+@media (max-width:620px){
+  .landings ol{grid-template-columns:1fr}
+  .hero{padding-top:64px}
+  .day-head .sec-title{font-size:1.45rem}
+  .day-clock{font-size:1.7rem}
+  .day-clock.is-word{font-size:1.15rem}
+}
+
+/* ---------- reduced motion: resting states, nothing hidden ---------- */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  .plane{transform:none!important}
+  .day-field .apd,.day-list li,.rail a .rm,.rail .seg::after{transition:none!important}
+}
+</style>
+<noscript><style>
+  [data-sc-in],[data-sc-stagger]>*{opacity:1!important;transform:none!important}
+  .day-stage{height:auto!important;overflow:visible!important}
+  .day-field svg{display:none}
+  .day-list{position:static}
+  .day-list li{position:static;opacity:1;transform:none;width:auto;text-align:left;padding:10px 0;border-bottom:1px solid var(--hairline-ink)}
+  .d-desc{display:block;color:var(--paper-soft)}
+  .day-now{display:none}
+</style></noscript>
+</head>
+<body class="theme-ink">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- the site's secondary mark: a square with the bottom-right corner cut (0.42 of the side) -->
+    <symbol id="apd" viewBox="0 0 100 100"><path d="M0,0 H100 V58 H58 V100 H0 Z"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav2">
+  <div class="wrap nav-inner">
+    <a class="nav-home" href="/" aria-label="NHNCD, home">
+      <svg class="wordmark" viewBox="0 0 2444 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NHNCD"><path d="M0,0 h56 v400 h-56 Z"/><path d="M244,0 h56 v400 h-56 Z"/><path d="M50,0 L121,0 L250,400 L179,400 Z"/><path d="M488,0 h56 v400 h-56 Z"/><path d="M732,0 h56 v400 h-56 Z"/><path d="M544,164 h188 v56 h-188 Z"/><path d="M976,0 h56 v400 h-56 Z"/><path d="M1220,0 h56 v400 h-56 Z"/><path d="M1026,0 L1097,0 L1226,400 L1155,400 Z"/><path d="M1464,0 L1737.7,0 L1764,56 L1464,56 Z"/><path d="M1464,344 L1764,344 L1737.7,400 L1464,400 Z"/><path d="M1464,0 h56 v400 h-56 Z"/><path fill-rule="evenodd" d="M1952,0 L2182,0 L2252,148.9 L2252,251.1 L2182,400 L1952,400 Z M2008,56 L2146.4,56 L2196,161.4 L2196,238.6 L2146.4,344 L2008,344 Z"/><path class="dot" d="M2372,328 h72 v72 h-72 Z"/></svg>
+    </a>
+    <a class="backlink" href="/">Back to nhncd.ai&nbsp;→</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ Chapter 1, title page: the dots at three depths ============ -->
+<section class="hero theme-ink" data-sc-act="flow" aria-labelledby="t-hero">
+  <div class="plane plane--back" data-sc-parallax="-1.2" aria-hidden="true"><svg id="planeBack" preserveAspectRatio="xMidYMid slice"></svg></div>
+  <div class="plane plane--mid" data-sc-parallax="-0.5" aria-hidden="true"><svg id="planeMid" preserveAspectRatio="xMidYMid slice"></svg></div>
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow">The NHNCD AI Operating System</p>
+    <h1 id="t-hero">A company that runs on its own operating&nbsp;system.</h1>
+    <p class="lede">NHNCD runs its knowledge work on files that AI agents act on, under written rules, every day.</p>
+    <div class="cta-row">
+      <a class="btn btn-oxblood" href="mailto:hello@nhncd.ai?subject=NHNCD%20AI%20Operating%20System">Start with a conversation</a>
+      <p class="cta-quiet">Four scenes: the issue, the idea, the installation, one day of it running.</p>
+    </div>
+  </div>
+  <div class="plane plane--front" data-sc-parallax="0.6" aria-hidden="true"><svg id="planeFront" preserveAspectRatio="xMidYMid slice"></svg></div>
+</section>
+
+<!-- ============ Chapter 1: the issue (discomfort) ============ -->
+<section class="chapter theme-ink" id="issue" data-sc-act="flow" aria-labelledby="t-issue">
+  <div class="wrap">
+    <div class="rule"></div>
+    <h2 class="sec-title" id="t-issue">The issue.</h2>
+    <ol class="issue-list" data-sc-in data-sc-stagger="90">
+      <li><strong>Knowledge lives in people's heads.</strong><span>When the person is away, the company does not know what it knows.</span></li>
+      <li><strong>Work runs on memory and the clipboard.</strong><span>The same context is typed again into every tool, every session, every day.</span></li>
+      <li><strong>Silence is read as nothing happened.</strong><span>A routine that did not run looks exactly like a quiet morning.</span></li>
+      <li><strong>The founder carries the list alone.</strong><span>Deciding what matters today is the heaviest task of the day, and it repeats.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ Chapter 2: the idea (quiet). Hard cut to paper. ============ -->
+<section class="chapter idea theme-paper" id="idea" data-sc-act="flow" aria-labelledby="t-idea">
+  <div class="wrap">
+    <h2 class="sr-only" id="t-idea">The idea</h2>
+    <p class="lead">Knowledge leaves people's heads and lands in files that agents can act&nbsp;on.</p>
+    <div class="idea-field" aria-hidden="true"><svg id="ideaSvg" viewBox="0 0 1000 340"></svg></div>
+    <p class="support">Under written rules. A person approves anything that leaves the building or cannot be undone.</p>
+  </div>
+</section>
+
+<!-- ============ Chapter 3: the installation (success) ============ -->
+<section class="chapter theme-paper" id="solution" data-sc-act="flow" aria-labelledby="t-solution">
+  <div class="wrap">
+    <div class="rule"></div>
+    <h2 class="sec-title" id="t-solution">What an installation is.</h2>
+    <p class="copy-limit" style="color:var(--ink-soft)">It lands in order. Each step produces something the company can see.</p>
+
+    <div class="landings">
+      <div class="landings-line" aria-hidden="true" id="landingsLine"></div>
+      <ol data-sc-in data-sc-stagger="110">
+        <li><span class="num">01</span><h3>The kit</h3><p>An open-source starter extracted from the live OS, every operator-specific fact removed.</p></li>
+        <li><span class="num">02</span><h3>The intake</h3><p>Seven questions fill the operating manual and scaffold the first file set. Re-runnable.</p></li>
+        <li><span class="num">03</span><h3>The first routine</h3><p>The daily brief, self-delivered by email from an always-on host at a fixed local time.</p></li>
+        <li><span class="num">04</span><h3>The first record</h3><p>A decisions-log entry, and the first meeting record from the capture pipeline.</p></li>
+        <li><span class="num">05</span><h3>The first board</h3><p>One page per workstream, read at session open and rewritten at close.</p></li>
+      </ol>
+    </div>
+    <p class="after-landings">Then the weekly loop: an audit on day seven, a level-up on day fourteen, one shipped automation a week from there.</p>
+
+    <div class="parts" data-sc-in data-sc-stagger="80">
+      <h3>Five parts.</h3>
+      <dl>
+        <div><dt>Roles</dt><dd>A lead agent. One session per workstream, each against its own board. A Chief of Staff that integrates.</dd></div>
+        <div><dt>Skills</dt><dd>Written, versioned procedures. A short phrase triggers one. It produces an artifact, not a chat.</dd></div>
+        <div><dt>Routines</dt><dd>Skills that run on a schedule, unattended, on an always-on host. Five run today.</dd></div>
+        <div><dt>Connections</dt><dd>One registry of every system the OS can reach, how, and when it was last checked. Microsoft 365 first.</dd></div>
+        <div><dt>Governance</dt><dd>Boards, a decisions log, per-goal mandates, approval gates, and a written model-routing doctrine.</dd></div>
+      </dl>
+    </div>
+
+    <div class="parts" data-sc-in data-sc-stagger="80">
+      <h3>What stays human.</h3>
+      <ul>
+        <li><strong>Every external output.</strong> No email, proposal, client document or public post leaves without a person's approval.</li>
+        <li><strong>Every deletion.</strong> Files move to an archive. Nothing is deleted permanently by an agent.</li>
+        <li><strong>Every change to shared infrastructure, every payment, every publication.</strong> A person approves, always. No mandate can configure that away.</li>
+      </ul>
+    </div>
+
+    <div class="parts" data-sc-in data-sc-stagger="80">
+      <h3>The boundary.</h3>
+      <ul>
+        <li><strong>No autonomous sends.</strong> Agents draft and prepare. Sending is a human act.</li>
+        <li><strong>No client data on consumer AI accounts.</strong> Client work runs under commercial terms with a data processing addendum and no training on customer content.</li>
+        <li><strong>No health data to the model under standard terms.</strong> A health-data product needs its own arrangement.</li>
+        <li><strong>Where data sits is disclosed as it is.</strong> The tenant's region, the code host, the company's own machines.</li>
+      </ul>
+    </div>
+
+    <div class="parts" data-sc-in data-sc-stagger="80">
+      <h3>How an engagement starts.</h3>
+      <div>
+        <p class="sequence">A call<span>→</span>a recap<span>→</span>your feedback<span>→</span>an offer<span>→</span>the engagement.</p>
+        <p class="note">The recap is written for you before anything is proposed. The offer that follows it carries the scope.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Chapter 4: one day in the OS (the peak). Hard cut to ink. ============ -->
+<section class="theme-ink" id="day" data-sc-act="pin" data-sc-span="5.5" aria-labelledby="t-day">
+  <div data-sc-stage class="day-stage" id="dayStage" data-sc-verify-state="0:05:00">
+    <div class="wrap">
+      <div class="day-head">
+        <div>
+          <p class="eyebrow">One day in the OS</p>
+          <h2 class="sec-title" id="t-day">NHNCD runs on it. Every day.</h2>
+        </div>
+        <p class="day-clock" id="dayClock" aria-live="off">05:00</p>
+      </div>
+      <div class="day-body">
+        <div class="day-field" id="dayField">
+          <svg id="daySvg" aria-hidden="true"></svg>
+          <ol class="day-list" id="dayList">
+            <li data-when="05:05"><span class="d-time">05:05</span><span class="d-title">Watch sweep</span><span class="d-desc">New items from the sources the founder follows land in one inbox file. No AI in the polling.</span></li>
+            <li data-when="05:30"><span class="d-time">05:30</span><span class="d-title">Resource sweep</span><span class="d-desc">Each item is triaged. Every verdict is logged with a reason. Nothing is dropped silently.</span></li>
+            <li data-when="06:30"><span class="d-time">06:30</span><span class="d-title">Daily brief</span><span class="d-desc">One email. Planner, tasks, flagged mail, three calendars and every board, grouped by project.</span></li>
+            <li data-when="07:30"><span class="d-time">07:30</span><span class="d-title">Heartbeat</span><span class="d-desc">From here, every thirty minutes. A routine that goes silent pages a phone.</span></li>
+            <li data-when="Morning" data-word="1"><span class="d-time">Morning</span><span class="d-title">Chief of Staff</span><span class="d-desc">The greeting renders every board. What happened off-app is captured and reconciled.</span></li>
+            <li data-when="In session" data-word="1"><span class="d-time">In session</span><span class="d-title">The board</span><span class="d-desc">A session opens by reading its board. Every dispatch to another model names the model, and why.</span></li>
+            <li data-when="Per meeting" data-word="1"><span class="d-time">Per meeting</span><span class="d-title">The record</span><span class="d-desc">Device audio becomes a verified English record the same day. Actions fan out on approval.</span></li>
+            <li data-when="Per decision" data-word="1"><span class="d-time">Per decision</span><span class="d-title">The log</span><span class="d-desc">One line: what was decided, why, by whom. Append only.</span></li>
+            <li data-when="Before it leaves" data-word="1"><span class="d-time">Before it leaves</span><span class="d-title">The gate</span><span class="d-desc">No email, proposal or post leaves the building without a person's approval.</span></li>
+            <li data-when="Session close" data-word="1"><span class="d-time">Session close</span><span class="d-title">The board, again</span><span class="d-desc">Rewritten at close. The next session starts from the file, not from memory.</span></li>
+            <li data-when="Night" data-word="1"><span class="d-time">Night</span><span class="d-title">The receipt</span><span class="d-desc">The overnight agent files its receipt. No work is still a receipt. Absence is failure.</span></li>
+          </ol>
+        </div>
+        <p class="day-now" id="dayNow" aria-live="polite"><strong>Before dawn</strong>The machine is on. The first routine is minutes away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Close: the masthead ============ -->
+<section class="close theme-ink" data-sc-act="flow" aria-labelledby="t-close">
+  <div class="wrap mast">
+    <svg class="wordmark" viewBox="0 0 2444 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NHNCD"><path d="M0,0 h56 v400 h-56 Z"/><path d="M244,0 h56 v400 h-56 Z"/><path d="M50,0 L121,0 L250,400 L179,400 Z"/><path d="M488,0 h56 v400 h-56 Z"/><path d="M732,0 h56 v400 h-56 Z"/><path d="M544,164 h188 v56 h-188 Z"/><path d="M976,0 h56 v400 h-56 Z"/><path d="M1220,0 h56 v400 h-56 Z"/><path d="M1026,0 L1097,0 L1226,400 L1155,400 Z"/><path d="M1464,0 L1737.7,0 L1764,56 L1464,56 Z"/><path d="M1464,344 L1764,344 L1737.7,400 L1464,400 Z"/><path d="M1464,0 h56 v400 h-56 Z"/><path fill-rule="evenodd" d="M1952,0 L2182,0 L2252,148.9 L2252,251.1 L2182,400 L1952,400 Z M2008,56 L2146.4,56 L2196,161.4 L2196,238.6 L2146.4,344 L2008,344 Z"/><path class="dot" d="M2372,328 h72 v72 h-72 Z"/></svg>
+    <h2 class="line" id="t-close">This is how NHNCD runs. It is what an installation gives a&nbsp;company.</h2>
+    <a class="btn btn-oxblood" href="mailto:hello@nhncd.ai?subject=NHNCD%20AI%20Operating%20System">Start with a conversation</a>
+    <p class="contact-line"><a href="mailto:hello@nhncd.ai">hello@nhncd.ai</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://www.linkedin.com/company/nhncd-ai-limited/" target="_blank" rel="noopener noreferrer" aria-label="NHNCD on LinkedIn">LinkedIn</a></p>
+  </div>
+  <footer class="footer-ink">
+    <div class="wrap">
+      <p class="entity">NHNCD AI Limited · Registered in the Dubai International Financial Centre · Registration No. 13641 · Licence CL13641 · Innovation One, Level 3, DIFC, Dubai, UAE<br><a href="/privacy/">Privacy</a> · This site sets no cookies and runs no analytics.</p>
+    </div>
+  </footer>
+</section>
+
+</main>
+
+<nav class="rail" id="rail" aria-label="Chapters" data-ground="ink">
+  <a href="#issue" data-chapter="issue"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="rm" d="M0,0 H100 V58 H58 V100 H0 Z"/></svg><span class="label">The issue</span></a>
+  <span class="seg" aria-hidden="true"></span>
+  <a href="#idea" data-chapter="idea"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="rm" d="M0,0 H100 V58 H58 V100 H0 Z"/></svg><span class="label">The idea</span></a>
+  <span class="seg" aria-hidden="true"></span>
+  <a href="#solution" data-chapter="solution"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="rm" d="M0,0 H100 V58 H58 V100 H0 Z"/></svg><span class="label">The installation</span></a>
+  <span class="seg" aria-hidden="true"></span>
+  <a href="#day" data-chapter="day"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="rm" d="M0,0 H100 V58 H58 V100 H0 Z"/></svg><span class="label">One day</span></a>
+</nav>
+
+<script src="/assets/vendor/scrollcraft.js"></script>
+<script>
+/* ============ The dots that connect ============
+   One set of eleven positions, reused in every chapter. Everything here reads the
+   engine's published --sc-p; the engine itself is never touched. */
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var NS = "http://www.w3.org/2000/svg";
+  var N = 11;
+  /* scattered positions, normalised 0..1, the same in the hero and in the idea field */
+  var SCATTER = [
+    [0.08,0.22],[0.31,0.74],[0.19,0.48],[0.44,0.16],[0.57,0.62],[0.36,0.36],
+    [0.71,0.28],[0.63,0.86],[0.84,0.54],[0.92,0.18],[0.78,0.72]
+  ];
+  /* the hero keeps the copy column clear: the eleven sit to the right of it and in the top strip */
+  var HERO = [
+    [0.70,0.20],[0.79,0.62],[0.86,0.34],[0.94,0.14],[0.75,0.86],[0.90,0.78],
+    [0.77,0.50],[0.97,0.50],[0.83,0.08],[0.32,0.06],[0.55,0.92]
+  ];
+  function el(tag, attrs){ var n = document.createElementNS(NS, tag); for (var k in attrs) n.setAttribute(k, attrs[k]); return n; }
+  function dot(x, y, s, cls){
+    var u = el("use", {href:"#apd", x:x - s/2, y:y - s/2, width:s, height:s});
+    if (cls) u.setAttribute("class", cls);
+    return u;
+  }
+  function clamp01(v){ return v < 0 ? 0 : v > 1 ? 1 : v; }
+  function smooth(v){ v = clamp01(v); return v*v*(3-2*v); }
+  function readP(node){ var v = parseFloat(node.style.getPropertyValue("--sc-p")); return isNaN(v) ? 0 : v; }
+
+  /* ---- the hero planes: back (ambient), mid (the eleven), front (three) ---- */
+  function fillPlane(svg, points, size, cls){
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = 1000, H = 600;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    points.forEach(function(p){ svg.appendChild(dot(p[0]*W, p[1]*H, size, cls)); });
+  }
+  var back = document.getElementById("planeBack"), mid = document.getElementById("planeMid"), front = document.getElementById("planeFront");
+  if (back && mid && front){
+    fillPlane(back, [[0.14,0.90],[0.48,0.96],[0.62,0.10],[0.10,0.06],[0.90,0.92],[0.73,0.40],[0.98,0.28]], 7, "apd");
+    fillPlane(mid, HERO, 13, "apd");
+    fillPlane(front, [[0.74,0.92],[0.96,0.62],[0.6,0.04]], 24, "apd");
+  }
+
+  /* ---- the idea: the eleven dots settle onto one line under the hand ---- */
+  var ideaAct = document.getElementById("idea");
+  var ideaSvg = document.getElementById("ideaSvg");
+  var ideaDots = [], ideaLine = null, ideaLen = 0, ideaLast = -1;
+  if (ideaSvg){
+    var IW = 1000, IH = 340, pad = 40, lineY = 190;
+    ideaLine = el("path", {"class":"track", d:"M" + pad + "," + lineY + " L" + (IW - pad) + "," + lineY});
+    ideaLen = IW - 2*pad;
+    ideaLine.setAttribute("stroke-dasharray", ideaLen);
+    ideaLine.setAttribute("stroke-dashoffset", ideaLen);
+    ideaSvg.appendChild(ideaLine);
+    for (var i = 0; i < N; i++){
+      var d = dot(0, 0, 16, "apd");
+      ideaSvg.appendChild(d);
+      ideaDots.push({el:d, from:[SCATTER[i][0]*IW, SCATTER[i][1]*IH], to:[pad + i*ideaLen/(N-1), lineY]});
+    }
+    ideaLast = -1;
+  }
+  function drawIdea(p){
+    if (!ideaSvg) return;
+    var t = reduce ? 1 : smooth((p - 0.30) / 0.30);
+    var l = reduce ? 1 : smooth((p - 0.50) / 0.22);
+    if (t === ideaLast && l === ideaLastL) return;
+    ideaLast = t; ideaLastL = l;
+    ideaDots.forEach(function(d){
+      var x = d.from[0] + (d.to[0] - d.from[0]) * t;
+      var y = d.from[1] + (d.to[1] - d.from[1]) * t;
+      d.el.setAttribute("x", x - 8); d.el.setAttribute("y", y - 8);
+    });
+    ideaLine.setAttribute("stroke-dashoffset", (ideaLen * (1 - l)).toFixed(1));
+  }
+  var ideaLastL = -1;
+
+  /* ---- the installation: the line under the five landings (static; the list staggers in) ---- */
+  var landings = document.getElementById("landingsLine");
+  if (landings){
+    for (var k = 0; k < 5; k++){
+      var m = document.createElement("i");
+      m.style.left = "calc(" + (k * 100 / 5) + "% + 7px)";
+      var s = document.createElementNS(NS, "svg"); s.setAttribute("viewBox", "0 0 100 100");
+      s.appendChild(el("use", {href:"#apd", "class":"apd", width:100, height:100}));
+      m.appendChild(s); landings.appendChild(m);
+    }
+  }
+
+  /* ---- the day: the peak. The list is real markup; the script places it along the line
+     and lights it in order as the pinned act advances. ---- */
+  var dayAct = document.getElementById("day");
+  var stage = document.getElementById("dayStage");
+  var field = document.getElementById("dayField");
+  var svg = document.getElementById("daySvg");
+  var list = document.getElementById("dayList");
+  var clock = document.getElementById("dayClock");
+  var now = document.getElementById("dayNow");
+  var items = list ? Array.prototype.slice.call(list.querySelectorAll("li")) : [];
+  var track = null, lit = null, beat = null, hollow = [], apds = [], trackLen = 0, vertical = false, dayPts = [];
+  var NOW0 = now ? now.innerHTML : "";
+  var END = "<strong class=\"end\">The whole day, in files.</strong>Every item above is a real artifact the OS produces. The contents stay inside the company. On Fridays the audit and the level-up. On Sundays the digest.";
+  var FIRST_AT = 0.05, LAST_AT = 0.86, DONE_AT = 0.92;
+
+  if (reduce && dayAct) dayAct.setAttribute("data-sc-span", "1.3");
+
+  function layoutDay(){
+    if (!svg || !items.length) return;
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    hollow = []; apds = [];
+    var r = field.getBoundingClientRect();
+    var W = Math.max(r.width, 1), H = Math.max(r.height, 1);
+    vertical = window.innerWidth <= 860;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    svg.setAttribute("width", W); svg.setAttribute("height", H);
+    var pts = [];
+    if (!vertical){
+      var padX = 12, y = H * 0.5;
+      for (var i = 0; i < N; i++) pts.push([padX + i * (W - 2*padX) / (N - 1), y]);
+    } else {
+      var x = 12, top = 14, step = (H - 44) / (N - 1);
+      for (var j = 0; j < N; j++) pts.push([x, top + j * step]);
+    }
+    dayPts = pts;
+    var d = "M" + pts[0][0] + "," + pts[0][1] + " L" + pts[N-1][0] + "," + pts[N-1][1];
+    track = el("path", {"class":"track", d:d}); svg.appendChild(track);
+    lit = el("path", {"class":"lit", d:d});
+    trackLen = vertical ? (pts[N-1][1] - pts[0][1]) : (pts[N-1][0] - pts[0][0]);
+    lit.setAttribute("stroke-dasharray", trackLen); lit.setAttribute("stroke-dashoffset", trackLen);
+    svg.appendChild(lit);
+    /* the heartbeat: a tick every thirty minutes from 07:30 to the end of the day */
+    beat = el("path", {"class":"beat", d:"M" + pts[3][0] + "," + pts[3][1] + " L" + pts[N-1][0] + "," + pts[N-1][1]});
+    svg.appendChild(beat);
+    pts.forEach(function(p, i){
+      var h = el("rect", {"class":"hollow", x:p[0]-5, y:p[1]-5, width:10, height:10}); svg.appendChild(h); hollow.push(h);
+      var a = dot(p[0], p[1], 16, "apd"); svg.appendChild(a); apds.push(a);
+      var li = items[i];
+      li.classList.remove("above","below","first","last");
+      if (!vertical){
+        li.style.left = p[0] + "px";
+        var above = (i % 2 === 0);
+        li.classList.add(above ? "above" : "below");
+        if (i === 0) li.classList.add("first");
+        if (i === N-1) li.classList.add("last");
+        if (above){ li.style.top = ""; li.style.bottom = (H - p[1] + 16) + "px"; }
+        else { li.style.bottom = ""; li.style.top = (p[1] + 16) + "px"; }
+      } else {
+        li.style.left = ""; li.style.bottom = ""; li.style.top = (p[1] - 11) + "px";
+      }
+    });
+    dayLast = -1;
+    drawDay(dayAct ? readP(dayAct) : 0, true);
+  }
+
+  var dayLast = -1, dayDone = false;
+  function drawDay(p, force){
+    if (!lit) return;
+    if (reduce) p = 1;
+    var lineT = clamp01((p - 0.02) / (LAST_AT - 0.02));
+    var count = 0;
+    for (var i = 0; i < N; i++){ if (p >= FIRST_AT + i * (LAST_AT - FIRST_AT) / (N - 1)) count = i + 1; }
+    var done = p >= DONE_AT;
+    var key = count + ":" + done + ":" + lineT.toFixed(3);
+    if (!force && key === dayLast) return;
+    dayLast = key;
+    lit.setAttribute("stroke-dashoffset", (trackLen * (1 - lineT)).toFixed(1));
+    if (beat){
+      /* the ticks only run as far as the day has been lit */
+      var a = dayPts[3], z = dayPts[N-1], span = vertical ? (z[1] - a[1]) : (z[0] - a[0]);
+      var litEnd = lineT * trackLen - (vertical ? (a[1] - dayPts[0][1]) : (a[0] - dayPts[0][0]));
+      var e = Math.max(0, Math.min(span, litEnd));
+      beat.setAttribute("d", vertical ? ("M" + a[0] + "," + a[1] + " L" + a[0] + "," + (a[1] + e)) : ("M" + a[0] + "," + a[1] + " L" + (a[0] + e) + "," + a[1]));
+      beat.classList.toggle("on", count >= 4 && e > 2);
+    }
+    for (var j = 0; j < N; j++){
+      var on = j < count, cur = (j === count - 1);
+      apds[j].classList.toggle("on", on);
+      var sz = (cur && !done) ? 24 : 16, pt = dayPts[j];
+      apds[j].setAttribute("width", sz); apds[j].setAttribute("height", sz);
+      apds[j].setAttribute("x", pt[0] - sz/2); apds[j].setAttribute("y", pt[1] - sz/2);
+      items[j].classList.toggle("lit", on);
+      items[j].classList.toggle("past", on && !cur && !done);
+    }
+    if (count === 0){
+      clock.textContent = "05:00"; clock.classList.remove("is-word");
+      if (now.innerHTML !== NOW0) now.innerHTML = NOW0;
+    } else {
+      var li = items[count - 1];
+      var when = li.getAttribute("data-when");
+      clock.textContent = when; clock.classList.toggle("is-word", !!li.getAttribute("data-word"));
+      if (done){ if (!dayDone){ now.innerHTML = END; dayDone = true; } }
+      else {
+        dayDone = false;
+        var html = "<strong>" + li.querySelector(".d-title").textContent + "</strong>" + li.querySelector(".d-desc").textContent;
+        if (now.innerHTML !== html) now.innerHTML = html;
+      }
+    }
+    /* what actually paints, for the verification harness */
+    stage.setAttribute("data-sc-verify-state", count + ":" + clock.textContent + ":" + Math.round(lineT * 100) + (done ? ":end" : ""));
+    if (done || reduce) stage.setAttribute("data-sc-verify-hold", "true"); else stage.removeAttribute("data-sc-verify-hold");
+  }
+
+  /* ---- the folio rail ---- */
+  var rail = document.getElementById("rail");
+  var chapters = ["issue","idea","solution","day"].map(function(id){ return document.getElementById(id); });
+  var railLinks = rail ? Array.prototype.slice.call(rail.querySelectorAll("a")) : [];
+  var railSegs = rail ? Array.prototype.slice.call(rail.querySelectorAll(".seg")) : [];
+  function updateRail(){
+    if (!rail) return;
+    var y = window.scrollY + window.innerHeight * 0.5;
+    var current = -1;
+    chapters.forEach(function(c, i){ if (c && y >= c.offsetTop) current = i; });
+    railLinks.forEach(function(a, i){
+      a.classList.toggle("is-past", i < current);
+      a.classList.toggle("is-current", i === current);
+      a.setAttribute("aria-current", i === current ? "true" : "false");
+    });
+    railSegs.forEach(function(s, i){ s.classList.toggle("is-on", i < current); });
+    var ground = "ink";
+    if (current >= 0 && chapters[current]){ ground = chapters[current].classList.contains("theme-paper") ? "paper" : "ink"; }
+    /* the rail sits at the viewport's middle; take the ground of the element under it */
+    var mid = document.elementFromPoint(window.innerWidth - 20, window.innerHeight / 2);
+    if (mid){ var sec = mid.closest && mid.closest(".theme-paper, .theme-ink"); if (sec) ground = sec.classList.contains("theme-paper") ? "paper" : "ink"; }
+    if (rail.getAttribute("data-ground") !== ground) rail.setAttribute("data-ground", ground);
+  }
+
+  /* ---- mount the engine, then the page's own loop ---- */
+  ScrollCraft.mount(document.body);
+  layoutDay();
+  var lastIdea = -2, lastDay = -2, lastY = -1;
+  (function loop(){
+    if (ideaAct){ var pi = readP(ideaAct); if (pi !== lastIdea){ lastIdea = pi; drawIdea(pi); } }
+    if (dayAct){ var pd = readP(dayAct); if (pd !== lastDay){ lastDay = pd; drawDay(pd); } }
+    if (window.scrollY !== lastY){ lastY = window.scrollY; updateRail(); }
+    requestAnimationFrame(loop);
+  })();
+  var lastW = window.innerWidth;
+  window.addEventListener("resize", function(){ if (window.innerWidth !== lastW){ lastW = window.innerWidth; layoutDay(); } }, {passive:true});
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutDay);
+  if (window.ResizeObserver && field){
+    var roW = -1, roH = -1;
+    new ResizeObserver(function(entries){
+      var r = entries[0].contentRect;
+      if (Math.round(r.width) !== roW || Math.round(r.height) !== roH){ roW = Math.round(r.width); roH = Math.round(r.height); layoutDay(); }
+    }).observe(field);
+  }
+  drawIdea(ideaAct ? readP(ideaAct) : 0);
+  updateRail();
+})();
+</script>
+</body>
+</html>

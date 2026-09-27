@@ -1,0 +1,732 @@
+{
+  "doc": {
+    "height": 10246,
+    "vh": 900,
+    "acts": [
+      "flow",
+      "flow",
+      "flow",
+      "flow",
+      "pin",
+      "flow"
+    ],
+    "world": null
+  },
+  "report": [
+    {
+      "i": 0,
+      "y": 0,
+      "pct": 0,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        4543
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 1,
+      "y": 94,
+      "pct": 1,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        4449
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 2,
+      "y": 171,
+      "pct": 2,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        4372
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 3,
+      "y": 392,
+      "pct": 4,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        4151
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 4,
+      "y": 487,
+      "pct": 5,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        4056
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 5,
+      "y": 606,
+      "pct": 6,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        3937
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 6,
+      "y": 690,
+      "pct": 7,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        3853
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 7,
+      "y": 802,
+      "pct": 9,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        3741
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 8,
+      "y": 982,
+      "pct": 11,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        3561
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 9,
+      "y": 1118,
+      "pct": 12,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        3425
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 10,
+      "y": 1359,
+      "pct": 15,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        3184
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 11,
+      "y": 1434,
+      "pct": 15,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        3109
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 12,
+      "y": 1685,
+      "pct": 18,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        2858
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 13,
+      "y": 1735,
+      "pct": 19,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        2808
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 14,
+      "y": 2111,
+      "pct": 23,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        2432
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 15,
+      "y": 2245,
+      "pct": 24,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        2298
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 16,
+      "y": 2487,
+      "pct": 27,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        2056
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 17,
+      "y": 2804,
+      "pct": 30,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        1739
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 18,
+      "y": 3364,
+      "pct": 36,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        1179
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 19,
+      "y": 3924,
+      "pct": 42,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        619
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 20,
+      "y": 4484,
+      "pct": 48,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        59
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 21,
+      "y": 4624,
+      "pct": 49,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        0
+      ],
+      "segs": [],
+      "custom": [
+        "0:05:00:0"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 22,
+      "y": 5401,
+      "pct": 58,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        0
+      ],
+      "segs": [],
+      "custom": [
+        "2:05:30:23"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 23,
+      "y": 6179,
+      "pct": 66,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        0
+      ],
+      "segs": [],
+      "custom": [
+        "5:Morning:46"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 24,
+      "y": 6957,
+      "pct": 74,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        0
+      ],
+      "segs": [],
+      "custom": [
+        "7:Per meeting:69"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 25,
+      "y": 7734,
+      "pct": 83,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        0
+      ],
+      "segs": [],
+      "custom": [
+        "10:Session close:91"
+      ],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 26,
+      "y": 8512,
+      "pct": 91,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        0
+      ],
+      "segs": [],
+      "custom": [
+        "11:Night:100:end"
+      ],
+      "customHold": true,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 27,
+      "y": 8626,
+      "pct": 92,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        -33
+      ],
+      "segs": [],
+      "custom": [
+        "11:Night:100:end"
+      ],
+      "customHold": true,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 28,
+      "y": 8943,
+      "pct": 96,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "pin",
+      "stages": [
+        -350
+      ],
+      "segs": [],
+      "custom": [
+        "11:Night:100:end"
+      ],
+      "customHold": true,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 29,
+      "y": 9261,
+      "pct": 99,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -668
+      ],
+      "segs": [],
+      "custom": [
+        "11:Night:100:end"
+      ],
+      "customHold": true,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    },
+    {
+      "i": 30,
+      "y": 9346,
+      "pct": 100,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [],
+      "wipes": [],
+      "act": "flow",
+      "stages": [
+        -753
+      ],
+      "segs": [],
+      "custom": [
+        "11:Night:100:end"
+      ],
+      "customHold": true,
+      "seg": null,
+      "segp": null,
+      "bg": "#14181A"
+    }
+  ],
+  "consoleErrors": [],
+  "failed": []
+}
