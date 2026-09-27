@@ -49,7 +49,7 @@ Pushes to `main` trigger an automatic Pages build. No CI/CD workflow needed.
 | Vision Petrol (NHNCD.vision accent) | `#2E5F73` on light grounds / `#5C9BB3` on ink |
 | Wordmark | Bespoke vector — no font. Inlined as SVG. |
 | Secondary mark | Filled aperture-dot (square with bottom-right corner cut) |
-| Fonts | [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (400/500/700), [Inter](https://fonts.google.com/specimen/Inter) (400/500/600), [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) (400/500) via Google Fonts |
+| Fonts | [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (400 to 700), [Inter](https://fonts.google.com/specimen/Inter) (400 to 600), [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) (400/500), self-hosted as latin woff2 subsets in `assets/fonts/` (licences beside them), preloaded per page; no third-party font requests |
 
 The two sub-brand accent rows are deliberate July 2026 palette amendments: green marks everything NHNCD.energy, petrol marks NHNCD.vision. No other colours may be introduced.
 

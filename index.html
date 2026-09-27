@@ -15,6 +15,10 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="NHNCD">
+  <meta property="og:image:alt" content="NHNCD wordmark with the line Be Enhanced by AI. on an off-white ground">
+  <meta name="twitter:image" content="https://nhncd.ai/assets/og-image.png">
+  <meta name="twitter:image:alt" content="NHNCD wordmark with the line Be Enhanced by AI. on an off-white ground">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_16.png">
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon_48.png">
@@ -69,6 +73,7 @@ body{
 ::selection{background:var(--oxblood);color:var(--paper)}
 
 img{max-width:100%;display:block}
+picture{display:contents}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--oxblood);outline-offset:3px}
 .theme-ink :focus-visible{outline-color:var(--green-bright)}
@@ -913,7 +918,7 @@ a.tile:hover{border-color:var(--green-deep)}
 <section id="about" aria-labelledby="t-founder" style="padding-top:0">
   <div class="wrap founder-grid">
     <figure>
-      <img src="/assets/founder-luca.jpg" loading="lazy" decoding="async" alt="Luca Ceschinelli" width="800" height="800">
+      <picture><source type="image/webp" srcset="/assets/founder-luca.webp"><img src="/assets/founder-luca.jpg" loading="lazy" decoding="async" alt="Luca Ceschinelli" width="800" height="800"></picture>
     </figure>
     <div class="body-copy">
       <div class="rule"></div>

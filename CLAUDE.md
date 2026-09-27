@@ -4,7 +4,7 @@ This is the corporate website for NHNCD AI Limited, deployed via GitHub Pages at
 
 ## Architecture
 
-Static HTML — three pages (`index.html`, `energy/index.html`, `privacy/index.html`) plus a branded `404.html`, with `sitemap.xml` and `robots.txt` at root and the Open Graph image in `assets/`. CSS and SVGs are inlined per page — duplicated CSS between pages is deliberate (no shared stylesheet, no framework, no build step). Fonts: Space Grotesk, Inter, and IBM Plex Mono via a single Google Fonts link per page. Internal links are root-relative (`/energy/`, `/privacy/`, `/favicon_32.png`, `/assets/og-image.png`) so they resolve from subfolders.
+Static HTML — three pages (`index.html`, `energy/index.html`, `privacy/index.html`) plus a branded `404.html`, with `sitemap.xml` and `robots.txt` at root and the Open Graph image in `assets/`. CSS and SVGs are inlined per page — duplicated CSS between pages is deliberate (no shared stylesheet, no framework, no build step). Fonts: Space Grotesk, Inter, and IBM Plex Mono self-hosted as latin woff2 subsets in `assets/fonts/`, declared by an `@font-face` block and preloaded in each page's head (no third-party font requests on any page). Internal links are root-relative (`/energy/`, `/privacy/`, `/favicon_32.png`, `/assets/og-image.png`) so they resolve from subfolders.
 
 ## Brand rules
 
