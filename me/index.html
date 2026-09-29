@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!--
+  /me/ : NHNCD.me, a training journey for one person that ends with their own AI operating system.
+  Unlinked preview, noindex, until LC publishes it.
+  Built 29 Sep 2026 in the site's own design system (the home page's paper "Letterhead" system:
+  tokens, type, components copied verbatim from index.html). The scroll-craft engine under
+  /assets/vendor/ (MIT, never edited per project) drives the flow reveals only: no pinned act,
+  no media, no generated imagery. Signature move: the kit's seven intake questions, and the file
+  each answer becomes in the reader's own OS, filled row by row from the block's own --sc-p.
+  Copy discipline: every value on this page traces to a file in the NHNCD OS or the kit; the PR
+  body carries the audit. No names. No prices. No dash punctuation.
+  Keep: the paper ground throughout (no cuts), the reduced-motion resting state (both columns of
+  the seven rows at rest), the real markup (the rows read as a list without JS).
+  Deliberate departures from the home page's declarations, all page-only: .hero1 h1 adds
+  text-wrap:balance; .tiles-4 (four tiles) steps to two columns below 960px and one below 600px
+  while the site's own .tiles rule is kept verbatim; .offers-h3 gives an offer block that sits
+  directly under a section h2 the h3 level with the site's h4 styling.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>NHNCD.me</title>
+  <meta name="description" content="A training journey for one person that ends with their own AI operating system: installed from an open kit, onboarded to them, with a first routine running.">
+  <link rel="canonical" href="https://nhncd.ai/me/">
+  <meta name="theme-color" content="#F4F2EC">
+  <meta property="og:title" content="NHNCD.me">
+  <meta property="og:description" content="A training journey for one person that ends with their own AI operating system.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nhncd.ai/me/">
+  <meta property="og:image" content="https://nhncd.ai/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="NHNCD">
+  <meta property="og:image:alt" content="NHNCD wordmark with the line Be Enhanced by AI. on an off-white ground">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nhncd.ai/assets/og-image.png">
+  <meta name="twitter:image:alt" content="NHNCD wordmark with the line Be Enhanced by AI. on an off-white ground">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon_48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_180.png">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/inter-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/space-grotesk-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/ibm-plex-mono-400-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/ibm-plex-mono-500-latin.woff2">
+  <link rel="stylesheet" href="/assets/vendor/scrollcraft.css">
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url('/assets/fonts/inter-latin.woff2') format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400 700;font-display:swap;src:url('/assets/fonts/space-grotesk-latin.woff2') format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/ibm-plex-mono-400-latin.woff2') format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/ibm-plex-mono-500-latin.woff2') format('woff2')}
+/* ============ NHNCD brand system ============
+   Light Letterhead (nhncd.ai) / dark Ink (NHNCD.energy)
+   Palette: Deep Oxblood #7E2632 · Oxblood Bright #CC5F73 ·
+   Warm Gold #B8862F (hairline detail only) · Ink #14181A · Off-White #F4F2EC ·
+   Energy Green #2F6B52 light / #489B76 ink · Vision Petrol #2E5F73 light / #5C9BB3 ink */
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --oxblood:#7E2632;
+  --oxblood-bright:#CC5F73;
+  --gold:#B8862F;
+  --gold-bright:#D9A441;
+  --ink:#14181A;
+  --paper:#F4F2EC;
+  --green-deep:#2F6B52;
+  --green-bright:#489B76;
+  --petrol-deep:#2E5F73;
+  --petrol-bright:#5C9BB3;
+  --ink-soft:#3A3F42;
+  --paper-soft:#C7C3B8;
+  --hairline:rgba(20,24,26,.18);
+  --hairline-ink:rgba(244,242,236,.16);
+  --sg:'Space Grotesk','Segoe UI',Arial,sans-serif;
+  --inter:'Inter',system-ui,'Segoe UI',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Consolas,'Courier New',monospace;
+
+  /* scroll-craft engine tokens, mapped to the site's paper ground.
+     The brand prohibits gradients, shadows and radii above 2px: zeroed here. */
+  --sc-canvas:var(--paper);
+  --sc-surface:#EDE9DD;
+  --sc-ink:var(--ink);
+  --sc-ink-soft:var(--ink-soft);
+  --sc-accent:var(--oxblood);
+  --sc-accent-ink:var(--paper);
+  --sc-font-display:var(--sg);
+  --sc-font-text:var(--inter);
+  --sc-font-mono:var(--mono);
+  --sc-r-sm:0;--sc-r-md:0;--sc-r-lg:0;--sc-r-pill:0;
+  --sc-e1:none;--sc-e2:none;--sc-e3:none;--sc-edge:none;
+  --sc-maxw:1080px;
+}
+
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  font-family:var(--inter);
+  font-size:1.0625rem;
+  line-height:1.7;
+  background:var(--paper);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:normal;
+}
+@supports (scrollbar-color:auto){html{scrollbar-color:auto;scrollbar-width:auto}}
+::selection{background:var(--oxblood);color:var(--paper)}
+
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--oxblood);outline-offset:3px;border-radius:0}
+
+.wrap{max-width:1080px;margin:0 auto;padding-left:26px;padding-right:26px;padding-left:clamp(20px,4vw,32px);padding-right:clamp(20px,4vw,32px)}
+
+/* ---------- wordmark & lockup ---------- */
+.wordmark{display:block;width:auto}
+.wordmark path{fill:currentColor}
+.wordmark .dot{fill:var(--oxblood)}
+
+.lockup{display:flex;align-items:flex-end;text-decoration:none}
+.lockup .wordmark{height:var(--wmh,24px)}
+.lockup .suffix{
+  font-family:var(--sg);font-weight:500;line-height:1;
+  font-size:calc(var(--wmh,24px)*1.12);
+  margin-left:calc(var(--wmh,24px)*0.14);
+  transform:translateY(0.17em);
+  letter-spacing:-0.01em;
+}
+.suffix{color:var(--oxblood)}
+
+/* ---------- type primitives ---------- */
+.rule{width:64px;height:2px;background:var(--oxblood);margin-bottom:26px}
+
+.eyebrow{
+  font-family:var(--mono);font-weight:500;font-size:0.72rem;
+  text-transform:uppercase;letter-spacing:0.2em;
+  color:var(--oxblood);margin-bottom:16px;
+}
+
+.sec-title{
+  font-family:var(--sg);font-weight:700;
+  font-size:2rem;
+  font-size:clamp(1.7rem,3.2vw,2.35rem);
+  letter-spacing:-0.015em;line-height:1.12;
+  margin-bottom:24px;
+}
+section{padding:84px 0;padding:clamp(64px,9vw,108px) 0}
+.body-copy p{max-width:720px;margin-bottom:20px;color:var(--ink-soft)}
+.body-copy p:last-child{margin-bottom:0}
+
+/* ---------- oversized pull-quote (What we do) ---------- */
+.whatwedo-cols{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,380px);
+  column-gap:clamp(40px,6vw,84px);row-gap:40px;align-items:center;
+}
+.pullquote{
+  font-family:var(--sg);font-weight:700;
+  font-size:clamp(26px,4vw,42px);
+  letter-spacing:-0.02em;line-height:1.18;
+}
+.body-copy p.pullquote{color:var(--ink);max-width:420px;margin:0}
+
+/* ---------- buttons & links ---------- */
+.btn{
+  display:inline-block;border-radius:0;border:1px solid transparent;
+  font-family:var(--sg);font-weight:700;font-size:1rem;
+  letter-spacing:0.01em;text-decoration:none;
+  padding:15px 30px;transition:background-color .15s ease,border-color .15s ease;
+}
+.btn-oxblood{background:var(--oxblood);color:var(--paper)}
+.btn-oxblood:hover{background:#69202A}
+.btn-sm{padding:10px 20px;font-size:0.9rem}
+
+.textlink{
+  color:var(--ink);font-weight:600;text-decoration:none;
+  border-bottom:1px solid var(--oxblood);padding-bottom:1px;
+}
+.textlink:hover{color:var(--oxblood)}
+
+/* ---------- nav (page 1) ---------- */
+.nav1{border-bottom:1px solid var(--hairline);background:var(--paper)}
+.nav-inner{
+  display:flex;align-items:center;flex-wrap:wrap;
+  gap:14px 28px;padding-top:20px;padding-bottom:20px;
+}
+.nav-home{color:var(--ink);display:block}
+.nav-home .wordmark{height:21px}
+/* the /energy/ and /ai-os/ backlink, in the paper ground's colours */
+.backlink{
+  margin-left:auto;font-family:var(--mono);font-weight:500;font-size:0.72rem;
+  text-transform:uppercase;letter-spacing:0.2em;
+  color:var(--ink-soft);text-decoration:none;padding-bottom:2px;
+  border-bottom:1px solid transparent;
+}
+.backlink:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* ---------- hero (page 1): the title page. One line at the top of the site's display range ---------- */
+.hero1{position:relative;padding:100px 0;padding:clamp(76px,10vw,128px) 0;overflow:hidden}
+.hero1 .wrap{position:relative;z-index:1}
+.hero1 h1{
+  font-family:var(--sg);font-weight:700;
+  font-size:3.4rem;
+  font-size:clamp(2.6rem,6.4vw,4.3rem);
+  letter-spacing:-0.025em;line-height:1.04;
+  max-width:760px;
+  text-wrap:balance;
+}
+.lede{
+  font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.65;
+  color:var(--ink-soft);max-width:660px;margin:28px 0 40px;
+}
+.cta-row{display:flex;align-items:center;gap:20px 34px;flex-wrap:wrap}
+.cta-quiet{font-size:0.98rem;color:var(--ink-soft)}
+.apmark-decor{position:absolute;top:50%;right:clamp(20px,5vw,64px);right:max(clamp(20px,5vw,64px),calc((100% - 1080px)/2 + 32px));transform:translateY(-50%);z-index:0}
+.apmark-decor .apmark{width:clamp(140px,17vw,210px);height:auto;display:block}
+.ap-light .apbody{fill:var(--ink)}
+.ap-light .apdot{fill:var(--oxblood)}
+
+/* ---------- services, Section D: five pillars as an editorial ledger ---------- */
+.pillars{margin-top:12px;border-top:1px solid var(--hairline)}
+.pillar{
+  display:grid;grid-template-columns:250px minmax(0,1fr);
+  gap:18px clamp(32px,5vw,56px);
+  padding:34px 0 36px;border-bottom:1px solid var(--hairline);
+}
+.pillar-head{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.pillar-num{
+  font-family:var(--mono);font-weight:500;font-size:0.78rem;
+  letter-spacing:0.18em;color:var(--oxblood);
+}
+.pillar-head h3{
+  font-family:var(--sg);font-weight:500;font-size:1.22rem;
+  letter-spacing:-0.01em;line-height:1.3;
+}
+.pillar-line{
+  font-family:var(--sg);font-weight:500;font-size:1.1rem;
+  line-height:1.55;color:var(--ink);max-width:640px;
+}
+.pillar-body p{max-width:640px;color:var(--ink-soft);margin-top:16px}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px clamp(24px,3vw,36px)}
+.offers-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px}
+.offer{min-width:0}
+.offer h4{
+  font-family:var(--sg);font-weight:500;font-size:1rem;
+  letter-spacing:-0.005em;line-height:1.35;margin-bottom:8px;
+}
+.offer h4::before{content:"";display:block;width:8px;height:8px;background:var(--oxblood);margin-bottom:12px}
+.offer p{font-size:0.94rem;line-height:1.62;color:var(--ink-soft)}
+/* page-only: an offer block that sits directly under a section h2 carries h3 headings
+   (no pillar h3 above it, so h4 would skip a level); same styling as the site's .offer h4 */
+.offers-h3 .offer h3{
+  font-family:var(--sg);font-weight:500;font-size:1rem;
+  letter-spacing:-0.005em;line-height:1.35;margin-bottom:8px;
+}
+.offers-h3 .offer h3::before{content:"";display:block;width:8px;height:8px;background:var(--oxblood);margin-bottom:12px}
+
+/* ---------- how we work, the engagement ladder ---------- */
+.ladder{
+  max-width:860px;
+  font-family:var(--sg);font-weight:500;
+  font-size:clamp(1.12rem,1.9vw,1.38rem);line-height:1.58;
+  letter-spacing:-0.005em;color:var(--ink);
+  border-left:2px solid var(--oxblood);padding-left:clamp(18px,3vw,26px);
+}
+.ladder strong{font-weight:700}
+.rungs{
+  display:flex;align-items:center;gap:14px;
+  max-width:860px;margin-top:44px;
+}
+.rung{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.rung-dot{width:9px;height:9px;background:var(--oxblood);flex:0 0 auto}
+.rung:nth-child(1) .rung-dot{opacity:.3}
+.rung:nth-child(3) .rung-dot{opacity:.55}
+.rung:nth-child(5) .rung-dot{opacity:.8}
+.rung:nth-child(7) .rung-dot{opacity:1}
+.rung-label{
+  font-family:var(--mono);font-weight:500;font-size:0.7rem;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);
+}
+.rung-link{flex:1 1 24px;height:1px;background:var(--hairline);min-width:12px}
+
+/* ---------- the seven answers that become files (the signature move) ----------
+   Real markup: an ordered list of the kit's intake questions with the file each answer
+   becomes. The right column fills row by row from the block's own --sc-p, published by the
+   engine on this act; without JS, or under reduced motion, both columns sit at rest. */
+.qa{margin-top:30px;max-width:640px}
+.qa-head{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,13rem);gap:0 28px;
+  padding-bottom:10px;border-bottom:1px solid var(--hairline);
+  font-family:var(--mono);font-weight:500;font-size:0.68rem;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--ink-soft);
+}
+.q-list{list-style:none;counter-reset:q}
+.q-list li{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,13rem);gap:4px 28px;
+  padding:13px 0;border-bottom:1px solid var(--hairline);align-items:baseline;
+}
+.q-list .from{display:grid;grid-template-columns:2.2rem minmax(0,1fr);align-items:baseline;color:var(--ink);font-size:0.98rem;line-height:1.5}
+.q-list .from::before{
+  counter-increment:q;content:counter(q,decimal-leading-zero);
+  font-family:var(--mono);font-weight:500;font-size:0.72rem;letter-spacing:0.18em;
+  color:var(--oxblood);
+}
+.q-list .to{
+  --k:clamp(0,calc((var(--sc-p,1) - var(--at,0)) * 12),1);
+  font-family:var(--mono);font-weight:500;font-size:0.84rem;letter-spacing:0.02em;color:var(--oxblood);
+  opacity:var(--k);transform:translate3d(0,calc((1 - var(--k)) * 6px),0);
+}
+.q-list li:nth-child(1) .to{--at:.16}
+.q-list li:nth-child(2) .to{--at:.21}
+.q-list li:nth-child(3) .to{--at:.26}
+.q-list li:nth-child(4) .to{--at:.31}
+.q-list li:nth-child(5) .to{--at:.36}
+.q-list li:nth-child(6) .to{--at:.41}
+.q-list li:nth-child(7) .to{--at:.46}
+.qa-foot{
+  margin-top:14px;font-family:var(--mono);font-weight:500;font-size:0.72rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--ink-soft);
+  --k:clamp(0,calc((var(--sc-p,1) - .52) * 12),1);opacity:var(--k);
+}
+.qa-foot b{font-weight:500;color:var(--oxblood)}
+
+/* ---------- methodology strip, centred quote, gold bars L+R ---------- */
+.method-strip{background:#EDE9DD;border-top:1px solid rgba(20,24,26,.07);border-bottom:1px solid rgba(20,24,26,.07)}
+.method-strip .wrap{padding-top:44px;padding-bottom:44px}
+.method-quote{
+  display:flex;align-items:stretch;justify-content:center;
+  gap:clamp(22px,4vw,40px);max-width:680px;margin:0 auto;
+}
+.method-quote::before,
+.method-quote::after{content:"";flex:0 0 2px;background:var(--gold)}
+.method-quote p{
+  font-style:italic;font-size:1.08rem;color:#2E3336;
+  text-align:center;line-height:1.7;
+}
+
+/* ---------- beyond advisory tiles ---------- */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.tiles-4{grid-template-columns:repeat(4,1fr)}
+.tile{
+  border:1px solid var(--hairline);padding:30px 28px;
+  display:flex;flex-direction:column;gap:14px;min-height:240px;
+  text-decoration:none;color:var(--ink);
+}
+.tile h3{font-family:var(--sg);font-weight:500;font-size:1.14rem;letter-spacing:-0.005em;line-height:1.35}
+.tile p{font-size:0.94rem;line-height:1.6;color:var(--ink-soft);flex-grow:1}
+.tag-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.tag{
+  font-family:var(--mono);font-weight:500;font-size:0.64rem;
+  text-transform:uppercase;letter-spacing:0.16em;color:#565B5E;
+}
+
+/* ---------- the boundary: the pillar ledger without numbers ---------- */
+.prereq{
+  margin-top:34px;padding-top:22px;border-top:1px solid var(--hairline);max-width:860px;
+  display:flex;flex-wrap:wrap;gap:8px 0;align-items:baseline;
+}
+.prereq dt{
+  font-family:var(--mono);font-weight:500;font-size:0.7rem;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--oxblood);margin-right:22px;
+}
+.prereq dd{font-family:var(--mono);font-size:0.84rem;color:var(--ink);margin:0;white-space:nowrap}
+.prereq dd:not(:last-of-type)::after{content:"·";color:var(--ink-soft);margin:0 12px}
+
+/* ---------- contact ---------- */
+.contact-line{margin-top:36px;font-family:var(--sg);font-weight:500;font-size:clamp(1.15rem,2vw,1.45rem)}
+.contact-line a{
+  color:var(--ink);text-decoration:none;
+  border-bottom:2px solid var(--oxblood);padding-bottom:2px;
+}
+.contact-line a:hover{color:var(--oxblood)}
+
+/* ---------- footers ---------- */
+.footer{border-top:1px solid var(--gold);padding:40px 0 52px}
+.footer .wordmark{height:15px;margin-bottom:22px;color:var(--ink)}
+.entity{
+  font-family:var(--mono);font-size:0.68rem;letter-spacing:0.06em;
+  line-height:2;color:#3F4447;max-width:860px;
+}
+.entity a{color:#3F4447}
+.entity a:hover{color:var(--oxblood)}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .apmark-decor{display:none}
+  .tiles{grid-template-columns:1fr}
+  .tile{min-height:0}
+  .tiles-4{grid-template-columns:repeat(2,1fr)}
+  .whatwedo-cols{grid-template-columns:1fr}
+  .pillar{grid-template-columns:1fr;gap:14px}
+  .offers{grid-template-columns:1fr;max-width:none}
+}
+@media (max-width:600px){
+  .rungs{flex-wrap:wrap;gap:12px 18px}
+  .rung-link{display:none}
+  .tiles-4{grid-template-columns:1fr}
+  .qa-head,.q-list li{grid-template-columns:1fr}
+  .qa-head span+span{display:none}
+  .q-list .to{padding-left:2.2rem}
+  .prereq dd:not(:last-of-type)::after{content:"";margin:0}
+  .prereq dd{width:100%;white-space:normal}
+}
+@media (max-width:540px){
+  .backlink{margin-left:0}
+}
+
+/* ---------- reduced motion: complete compositions, no movement ---------- */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .q-list .to,.qa-foot{opacity:1!important;transform:none!important}
+}
+</style>
+<noscript><style>
+  [data-sc-in],[data-sc-stagger]>*{opacity:1!important;transform:none!important}
+  .q-list .to,.qa-foot{opacity:1!important;transform:none!important}
+</style></noscript>
+</head>
+<body id="top">
+
+<header class="nav1">
+  <div class="wrap nav-inner">
+    <a class="nav-home" href="/" aria-label="NHNCD, home">
+      <svg class="wordmark" viewBox="0 0 2444 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NHNCD"><path d="M0,0 h56 v400 h-56 Z"/><path d="M244,0 h56 v400 h-56 Z"/><path d="M50,0 L121,0 L250,400 L179,400 Z"/><path d="M488,0 h56 v400 h-56 Z"/><path d="M732,0 h56 v400 h-56 Z"/><path d="M544,164 h188 v56 h-188 Z"/><path d="M976,0 h56 v400 h-56 Z"/><path d="M1220,0 h56 v400 h-56 Z"/><path d="M1026,0 L1097,0 L1226,400 L1155,400 Z"/><path d="M1464,0 L1737.7,0 L1764,56 L1464,56 Z"/><path d="M1464,344 L1764,344 L1737.7,400 L1464,400 Z"/><path d="M1464,0 h56 v400 h-56 Z"/><path fill-rule="evenodd" d="M1952,0 L2182,0 L2252,148.9 L2252,251.1 L2182,400 L1952,400 Z M2008,56 L2146.4,56 L2196,161.4 L2196,238.6 L2146.4,344 L2008,344 Z"/><path class="dot" d="M2372,328 h72 v72 h-72 Z"/></svg>
+    </a>
+    <a class="backlink" href="/">Back to nhncd.ai&nbsp;→</a>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. The title page -->
+<section class="hero1" data-sc-act="flow" aria-labelledby="t-hero">
+  <div class="apmark-decor" aria-hidden="true">
+    <svg class="apmark ap-light" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="apbody" d="M0,0 H400 V232 H232 V400 H0 Z"/><path class="apdot" d="M232,232 h168 v168 h-168 Z"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow">NHNCD.me</p>
+    <h1 id="t-hero">Your own AI operating&nbsp;system.</h1>
+    <p class="lede">A training journey for one person. It ends with an operating system of your own: installed on your machine from an open kit, onboarded to you, with its first routine running.</p>
+    <div class="cta-row">
+      <a class="btn btn-oxblood" href="mailto:hello@nhncd.ai?subject=NHNCD.me">Start with a conversation</a>
+      <p class="cta-quiet">One person at a time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Who it is for -->
+<section data-sc-act="flow" aria-labelledby="t-who" style="padding-top:0">
+  <div class="wrap body-copy">
+    <div class="rule"></div>
+    <h2 class="sec-title" id="t-who">Who it is for</h2>
+    <div class="whatwedo-cols">
+      <div>
+        <p>One person. A professional or an owner who already uses AI every day, simply, mostly from the phone, and wants it to work as a system rather than as a chat.</p>
+        <p>Not a team, not a department. A company that wants a rollout starts with the NHNCD AI Operating System. This page is for the person who wants their own.</p>
+      </div>
+      <p class="pullquote">«One person. Not a rollout.»</p>
+    </div>
+    <div class="offers offers-2 offers-h3" style="margin-top:48px" data-sc-in data-sc-stagger="70">
+      <div class="offer">
+        <h3>You use AI every day.</h3>
+        <p>Simply, and mostly from your phone. You have felt what it can do, and what it gets wrong.</p>
+      </div>
+      <div class="offer">
+        <h3>You want a system, not a chat.</h3>
+        <p>Reminders, drafts, sorting, the day paced. Work that runs on files you own, not on what you remember to ask.</p>
+      </div>
+      <div class="offer">
+        <h3>You learn by reading.</h3>
+        <p>Written explanation and diagrams over lecture video. Principles in depth, no equations. Exercises that test understanding.</p>
+      </div>
+      <div class="offer">
+        <h3>You have a few hours a week.</h3>
+        <p>Fewer, longer sittings rather than daily practice. Bottom-up, never assuming a level you do not have.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. The journey -->
+<section id="journey" data-sc-act="flow" aria-labelledby="t-journey" style="padding-top:0">
+  <div class="wrap">
+    <div class="rule"></div>
+    <h2 class="sec-title" id="t-journey">The journey</h2>
+    <p class="ladder"><strong>Four steps.</strong> It starts as a conversation, not a syllabus. A sitting draws out who you are, how you use AI today and how you learn. A written plan follows, for your corrections. Weekly sittings work through it, principles first. The capstone is your own operating system, installed and onboarded with you.</p>
+    <div class="rungs" aria-hidden="true">
+      <span class="rung"><span class="rung-dot"></span><span class="rung-label">Sitting</span></span>
+      <span class="rung-link"></span>
+      <span class="rung"><span class="rung-dot"></span><span class="rung-label">Plan</span></span>
+      <span class="rung-link"></span>
+      <span class="rung"><span class="rung-dot"></span><span class="rung-label">Sittings</span></span>
+      <span class="rung-link"></span>
+      <span class="rung"><span class="rung-dot"></span><span class="rung-label">Capstone</span></span>
+    </div>
+
+    <div class="pillars" style="margin-top:56px" data-sc-in data-sc-stagger="90">
+      <div class="pillar">
+        <div class="pillar-head">
+          <span class="pillar-num">01</span>
+          <h3>The sitting</h3>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-line">About two hours. Who you are, how you use AI today, why now, what you want to be able to do, how you learn, and what your employer allows.</p>
+          <p>You leave with a written record, minutes you can share, and one piece of homework: note every repetitive task you meet during the week.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-head">
+          <span class="pillar-num">02</span>
+          <h3>The plan</h3>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-line">Written for you from the sitting. Sent within the week, for your corrections.</p>
+          <p>It fixes the order and the pace. Nothing goes into it that has not been checked first.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-head">
+          <span class="pillar-num">03</span>
+          <h3>The sittings</h3>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-line">Weekly, in longer blocks. Prompts first, then goals, then the ecosystem around you: context, connections, capabilities, cadence.</p>
+          <p>Mechanisms matter more than exercises. Exercises are there to test understanding, not to fill the week.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-head">
+          <span class="pillar-num">04</span>
+          <h3>The capstone</h3>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-line">Your own operating system. Installed on your machine from an open kit, onboarded from seven questions, seeded from your own sittings.</p>
+          <div class="qa" data-sc-act="flow">
+            <div class="qa-head" aria-hidden="true"><span>What it asks you</span><span>What your answer becomes</span></div>
+            <ol class="q-list">
+              <li><span class="from">Who you are and what you do</span><span class="to">context/</span></li>
+              <li><span class="from">Two things you wrote, pasted as they are</span><span class="to">references/voice.md</span></li>
+              <li><span class="from">Your priorities for the next ninety days</span><span class="to">context/priorities.md</span></li>
+              <li><span class="from">Where money lands, and where it is tracked</span><span class="to">connections.md</span></li>
+              <li><span class="from">Where you talk to people, day to day</span><span class="to">connections.md</span></li>
+              <li><span class="from">Where recordings, notes and documents live</span><span class="to">connections.md</span></li>
+              <li><span class="from">The task that eats your week, and where work is tracked</span><span class="to">connections.md</span></li>
+            </ol>
+            <p class="qa-foot">All seven fill your operating manual, <b>CLAUDE.md</b></p>
+          </div>
+          <p>Not plug-and-play. Several hours of onboarding, seeded from your own sittings. Then the first week of use, and the first routine.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. What you leave with -->
+<section id="leave" data-sc-act="flow" aria-labelledby="t-leave" style="padding-top:0">
+  <div class="wrap">
+    <div class="rule"></div>
+    <h2 class="sec-title" id="t-leave">What you leave with</h2>
+    <p style="max-width:720px;color:var(--ink-soft)">Four things, and all four are yours.</p>
+    <div class="tiles tiles-4" data-sc-in data-sc-stagger="80">
+      <div class="tile">
+        <h3>An operating system of your own</h3>
+        <p>In a folder on your machine and in a repository you own. The kit is free and open. Your account, your sign-ins, no other credential.</p>
+        <span class="tag-row"><span class="tag">Yours</span></span>
+      </div>
+      <div class="tile">
+        <h3>Onboarded to you</h3>
+        <p>Your context, your voice, your priorities, your connections, written into it from your own answers. The first thing you ask it: what should I focus on this week?</p>
+        <span class="tag-row"><span class="tag">Onboarded</span></span>
+      </div>
+      <div class="tile">
+        <h3>A first routine</h3>
+        <p>One recurring task off your plate, chosen from your homework list and built with you. It works by hand before it runs on its own.</p>
+        <span class="tag-row"><span class="tag">Live</span></span>
+      </div>
+      <div class="tile">
+        <h3>The rhythm</h3>
+        <p>Before a call, an interview that pulls the plan out of your head. After a call, the record. At the end of a session, the handoff. On day seven the audit, on day fourteen the level-up, then weekly.</p>
+        <span class="tag-row"><span class="tag">Learned</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. What it is not, and the boundary -->
+<section id="boundary" data-sc-act="flow" aria-labelledby="t-not" style="padding:0">
+  <div class="method-strip">
+    <div class="wrap">
+      <div class="method-quote">
+        <p>Personal material runs on your own plan, with training on your data switched off. Anything that carries your employer's or a third party's data needs their policy and a commercial account with a data-processing addendum.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:clamp(64px,9vw,108px);padding-bottom:clamp(64px,9vw,108px)">
+    <div class="rule"></div>
+    <h2 class="sec-title" id="t-not">What it is not</h2>
+    <div class="offers offers-h3" data-sc-in data-sc-stagger="70">
+      <div class="offer">
+        <h3>Not a course.</h3>
+        <p>No fixed syllabus. One plan, written from your sitting, corrected by you, paced to how you learn.</p>
+      </div>
+      <div class="offer">
+        <h3>Not a licence.</h3>
+        <p>The kit is free and open. Your subscription is your own. The journey and the installation are the work, not the software.</p>
+      </div>
+      <div class="offer">
+        <h3>Not autonomy.</h3>
+        <p>Nothing leaves or gets deleted without you. The system asks before it writes outside its folders. You learn it before it runs anything on its own.</p>
+      </div>
+    </div>
+
+    <div class="pillars" style="margin-top:56px" data-sc-in data-sc-stagger="90">
+      <div class="pillar">
+        <div class="pillar-head">
+          <h3>Your files and accounts stay yours.</h3>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-line">The system lives in your folder and your repository. Every connection uses your own sign-in. Recordings and records stay on your machine.</p>
+          <p>What you say in confidence during the sitting stays out of every document.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-head">
+          <h3>Your work accounts stay out.</h3>
+        </div>
+        <div class="pillar-body">
+          <p class="pillar-line">Unless your employer's policy allows them. You ask for the policy; the usual answer is company tools only.</p>
+        </div>
+      </div>
+    </div>
+
+    <dl class="prereq">
+      <dt>You need</dt>
+      <dd>Windows 11</dd>
+      <dd>a Claude account, Pro or above</dd>
+      <dd>a GitHub account</dd>
+      <dd>Microsoft 365 or equivalent</dd>
+      <dd>a few hours a week</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- 6. Close -->
+<section id="contact" data-sc-act="flow" aria-labelledby="t-contact" style="padding-top:0">
+  <div class="wrap body-copy">
+    <div class="rule"></div>
+    <p class="eyebrow">Start here</p>
+    <h2 class="sec-title" id="t-contact">Start with a conversation.</h2>
+    <p>Write and say what you want to be able to do. The first sitting is a conversation, not a pitch. Replies come from a person, not a pipeline.</p>
+    <p style="margin-top:28px"><a class="btn btn-oxblood" href="mailto:hello@nhncd.ai?subject=NHNCD.me">Start with a conversation</a></p>
+    <p class="contact-line"><a href="mailto:hello@nhncd.ai">hello@nhncd.ai</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://www.linkedin.com/company/nhncd-ai-limited/" target="_blank" rel="noopener noreferrer" aria-label="NHNCD on LinkedIn">LinkedIn</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <svg class="wordmark" viewBox="0 0 2444 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NHNCD"><path d="M0,0 h56 v400 h-56 Z"/><path d="M244,0 h56 v400 h-56 Z"/><path d="M50,0 L121,0 L250,400 L179,400 Z"/><path d="M488,0 h56 v400 h-56 Z"/><path d="M732,0 h56 v400 h-56 Z"/><path d="M544,164 h188 v56 h-188 Z"/><path d="M976,0 h56 v400 h-56 Z"/><path d="M1220,0 h56 v400 h-56 Z"/><path d="M1026,0 L1097,0 L1226,400 L1155,400 Z"/><path d="M1464,0 L1737.7,0 L1764,56 L1464,56 Z"/><path d="M1464,344 L1764,344 L1737.7,400 L1464,400 Z"/><path d="M1464,0 h56 v400 h-56 Z"/><path fill-rule="evenodd" d="M1952,0 L2182,0 L2252,148.9 L2252,251.1 L2182,400 L1952,400 Z M2008,56 L2146.4,56 L2196,161.4 L2196,238.6 L2146.4,344 L2008,344 Z"/><path class="dot" d="M2372,328 h72 v72 h-72 Z"/></svg>
+    <p class="entity">NHNCD AI Limited · Registered in the Dubai International Financial Centre · Registration No. 13641 · Licence CL13641 · Innovation One, Level 3, DIFC, Dubai, UAE<br><a href="/privacy/">Privacy</a> · This site sets no cookies and runs no analytics.</p>
+  </div>
+</footer>
+
+<script src="/assets/vendor/scrollcraft.js"></script>
+<script>
+/* The engine drives the flow reveals and publishes --sc-p on every act, including the
+   seven-answers block; the fill is pure CSS against that variable. Nothing else runs. */
+(function(){ "use strict"; ScrollCraft.mount(document.body); })();
+</script>
+</body>
+</html>
