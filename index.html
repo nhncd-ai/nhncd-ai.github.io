@@ -497,7 +497,66 @@ a.tile:hover{border-color:var(--green-deep)}
 }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"NHNCD AI Limited","alternateName":"NHNCD","url":"https://nhncd.ai/","logo":"https://nhncd.ai/favicon_512.png","email":"hello@nhncd.ai","address":{"@type":"PostalAddress","streetAddress":"Innovation One, Level 3","addressLocality":"DIFC, Dubai","addressCountry":"AE"},"sameAs":["https://www.linkedin.com/company/nhncd-ai-limited/","https://www.linkedin.com/company/nhncd-energy/"]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nhncd.ai/#organization",
+      "name": "NHNCD AI Limited",
+      "legalName": "NHNCD AI Limited",
+      "alternateName": "NHNCD",
+      "url": "https://nhncd.ai/",
+      "logo": "https://nhncd.ai/favicon_512.png",
+      "description": "NHNCD AI Limited is a DIFC-based AI strategic advisory and integration firm for the energy and infrastructure sector.",
+      "email": "hello@nhncd.ai",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Innovation One, Level 3, Dubai International Financial Centre",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "founder": {
+        "@type": "Person",
+        "@id": "https://nhncd.ai/#founder",
+        "name": "Luca Ceschinelli",
+        "jobTitle": "Founder & CEO",
+        "url": "https://nhncd.ai/#about",
+        "worksFor": {
+          "@id": "https://nhncd.ai/#organization"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "general enquiries",
+        "email": "hello@nhncd.ai",
+        "url": "https://nhncd.ai/#contact"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/nhncd-ai-limited/",
+        "https://www.linkedin.com/company/nhncd-energy/"
+      ],
+      "knowsAbout": [
+        "AI readiness",
+        "AI strategy",
+        "AI integration",
+        "Executive translation",
+        "Change adoption",
+        "AI-as-a-Service for SMEs",
+        "Energy and infrastructure"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nhncd.ai/#website",
+      "url": "https://nhncd.ai/",
+      "name": "NHNCD",
+      "publisher": {
+        "@id": "https://nhncd.ai/#organization"
+      }
+    }
+  ]
+}
 </script>
 </head>
 <body id="top">

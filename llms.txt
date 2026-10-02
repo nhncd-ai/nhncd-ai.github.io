@@ -1,0 +1,17 @@
+# NHNCD
+
+> NHNCD AI Limited is a DIFC-based AI strategic advisory and integration firm for the energy and infrastructure sector.
+
+NHNCD AI Limited is the integration layer between business intent, AI capability and execution: AI readiness, strategy, integration, executive translation and change adoption for energy and infrastructure organisations, plus AI-as-a-Service for SMEs. Founder and CEO: Luca Ceschinelli. Registered in the Dubai International Financial Centre, Dubai, UAE (registration number 13641, licence CL13641), operating from the AI Campus, DIFC Innovation Hub. Contact: hello@nhncd.ai. LinkedIn: https://www.linkedin.com/company/nhncd-ai-limited/ (the company) and https://www.linkedin.com/company/nhncd-energy/ (NHNCD.energy).
+
+This site sets no cookies and runs no analytics.
+
+## Pages
+
+- [NHNCD](https://nhncd.ai/): the company page. What we do, the five service lines (AI Enhancement Audit, Strategy, Integration, Executive Translation, Change & Adoption), how we work, the founder, contact.
+- [NHNCD.energy, Project Intelligence](https://nhncd.ai/energy/): the energy and infrastructure page. Project Intelligence: multi-scenario techno-commercial-financial assessment with quantified confidence, for energy investment decisions. The founder's track record: 9.2 GW developed, structured or evaluated, 300+ projects, 67 countries. Energy services: Asset Performance Assurance, Tender & Bid Levelling, AI Enhancement Audit. Contact: hello@nhncd.energy.
+- [Privacy](https://nhncd.ai/privacy/): privacy notice for NHNCD AI Limited.
+
+## Optional
+
+- [Sitemap](https://nhncd.ai/sitemap.xml): the three indexable pages.
